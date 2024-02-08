@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.543">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yaotian Gao">
+<meta name="dcterms.date" content="2024-02-06">
+
+<title>BCB-Quarto Blog - BCB-assignment2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BCB-Quarto Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">BCB-assignment2</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yaotian Gao </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 6, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="dataset" class="level1">
+<h1><strong>Dataset</strong></h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the dataset from a specified file path</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"E:/01-文件/04-UI文件/2401-【课程】BCB/BCB/BCB520Practice/data.csv"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the dataset in a nicely formatted table using knitr package</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 32%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">ENT</th>
+<th style="text-align: left;">ID</th>
+<th style="text-align: right;">YLD.2017.AB.Ran</th>
+<th style="text-align: right;">YLD.2017.Soda.Ran</th>
+<th style="text-align: right;">YLD.2017.Walla.Ran</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">52001</td>
+<td style="text-align: left;">IDO854</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">45.0</td>
+<td style="text-align: right;">71.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52002</td>
+<td style="text-align: left;">SRRN-6029</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">75.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52003</td>
+<td style="text-align: left;">SRRN-6028</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">40.9</td>
+<td style="text-align: right;">75.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52004</td>
+<td style="text-align: left;">SRRN-6037</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">38.3</td>
+<td style="text-align: right;">86.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52005</td>
+<td style="text-align: left;">LOUISE</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">52.6</td>
+<td style="text-align: right;">75.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52006</td>
+<td style="text-align: left;">RIL29</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">43.7</td>
+<td style="text-align: right;">59.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52007</td>
+<td style="text-align: left;">IDO629</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">45.8</td>
+<td style="text-align: right;">72.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52008</td>
+<td style="text-align: left;">UC1110</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">45.5</td>
+<td style="text-align: right;">88.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52009</td>
+<td style="text-align: left;">UC1642</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">49.3</td>
+<td style="text-align: right;">80.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52010</td>
+<td style="text-align: left;">MT0921</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">38.6</td>
+<td style="text-align: right;">78.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52011</td>
+<td style="text-align: left;">Choteau</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">51.4</td>
+<td style="text-align: right;">84.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52012</td>
+<td style="text-align: left;">9223</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">56.8</td>
+<td style="text-align: right;">84.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52013</td>
+<td style="text-align: left;">Attila-1RS</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">42.1</td>
+<td style="text-align: right;">87.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52014</td>
+<td style="text-align: left;">Hahan-1RSMA</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">38.8</td>
+<td style="text-align: right;">90.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52015</td>
+<td style="text-align: left;">10010/20</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">49.7</td>
+<td style="text-align: right;">82.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52016</td>
+<td style="text-align: left;">MT0945</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: right;">62.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52017</td>
+<td style="text-align: left;">Newana</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">88.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52018</td>
+<td style="text-align: left;">UC1682</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">42.7</td>
+<td style="text-align: right;">59.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52019</td>
+<td style="text-align: left;">MT0813</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">51.9</td>
+<td style="text-align: right;">65.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52020</td>
+<td style="text-align: left;">9229</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">45.5</td>
+<td style="text-align: right;">87.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52021</td>
+<td style="text-align: left;">HW090006M</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: right;">85.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52022</td>
+<td style="text-align: left;">H0800080</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">45.2</td>
+<td style="text-align: right;">91.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52023</td>
+<td style="text-align: left;">H0800314</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">44.0</td>
+<td style="text-align: right;">72.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52024</td>
+<td style="text-align: left;">MT1020</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">42.0</td>
+<td style="text-align: right;">67.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52025</td>
+<td style="text-align: left;">9242</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">51.2</td>
+<td style="text-align: right;">86.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52026</td>
+<td style="text-align: left;">Fortuna</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">51.6</td>
+<td style="text-align: right;">71.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52027</td>
+<td style="text-align: left;">9260</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">46.7</td>
+<td style="text-align: right;">59.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52028</td>
+<td style="text-align: left;">9232</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">51.1</td>
+<td style="text-align: right;">41.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52029</td>
+<td style="text-align: left;">Tara2002</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">58.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52030</td>
+<td style="text-align: left;">UC1618</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">50.3</td>
+<td style="text-align: right;">50.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52031</td>
+<td style="text-align: left;">9233</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">51.4</td>
+<td style="text-align: right;">72.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52032</td>
+<td style="text-align: left;">WA8034</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">47.8</td>
+<td style="text-align: right;">79.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52033</td>
+<td style="text-align: left;">IDO852</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">41.5</td>
+<td style="text-align: right;">58.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52034</td>
+<td style="text-align: left;">IDO851</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">83.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52035</td>
+<td style="text-align: left;">WA8016</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">49.2</td>
+<td style="text-align: right;">82.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52036</td>
+<td style="text-align: left;">IDO696</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">55.0</td>
+<td style="text-align: right;">79.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52037</td>
+<td style="text-align: left;">28TH SAWSN-3045</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">43.9</td>
+<td style="text-align: right;">68.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52038</td>
+<td style="text-align: left;">9247</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">41.7</td>
+<td style="text-align: right;">85.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52039</td>
+<td style="text-align: left;">SRRN-6044</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">40.1</td>
+<td style="text-align: right;">58.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52040</td>
+<td style="text-align: left;">9240</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">39.0</td>
+<td style="text-align: right;">79.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52041</td>
+<td style="text-align: left;">Macon</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">74.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52042</td>
+<td style="text-align: left;">McNeal</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">41.5</td>
+<td style="text-align: right;">61.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52043</td>
+<td style="text-align: left;">SRRN-6042</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">49.5</td>
+<td style="text-align: right;">67.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52044</td>
+<td style="text-align: left;">RSI5 Yr5 Yr15 Gpc HMW 1</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">52.7</td>
+<td style="text-align: right;">74.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52045</td>
+<td style="text-align: left;">Thatcher</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">48.6</td>
+<td style="text-align: right;">80.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52046</td>
+<td style="text-align: left;">Jefferson</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">49.7</td>
+<td style="text-align: right;">64.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52047</td>
+<td style="text-align: left;">IDO582</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">43.1</td>
+<td style="text-align: right;">55.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52048</td>
+<td style="text-align: left;">IDO702</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">41.4</td>
+<td style="text-align: right;">51.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52049</td>
+<td style="text-align: left;">IDO644</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">61.4</td>
+<td style="text-align: right;">58.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52050</td>
+<td style="text-align: left;">WA8074</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">52.8</td>
+<td style="text-align: right;">78.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52051</td>
+<td style="text-align: left;">IDO671</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">42.3</td>
+<td style="text-align: right;">86.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52052</td>
+<td style="text-align: left;">SRRN-6099</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">52.8</td>
+<td style="text-align: right;">63.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52053</td>
+<td style="text-align: left;">WA8123</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">47.5</td>
+<td style="text-align: right;">63.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52054</td>
+<td style="text-align: left;">21TH HRWSN-2106</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">48.5</td>
+<td style="text-align: right;">65.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52055</td>
+<td style="text-align: left;">H0800310</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">43.6</td>
+<td style="text-align: right;">75.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52056</td>
+<td style="text-align: left;">H0900081</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">40.4</td>
+<td style="text-align: right;">52.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52057</td>
+<td style="text-align: left;">Jerome</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: right;">39.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52058</td>
+<td style="text-align: left;">Vida</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">42.7</td>
+<td style="text-align: right;">60.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52059</td>
+<td style="text-align: left;">CENTENNIAL</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">43.2</td>
+<td style="text-align: right;">51.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52060</td>
+<td style="text-align: left;">9252</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">41.9</td>
+<td style="text-align: right;">60.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52061</td>
+<td style="text-align: left;">PENAWAWA</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">40.5</td>
+<td style="text-align: right;">58.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52062</td>
+<td style="text-align: left;">UC1683</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">41.9</td>
+<td style="text-align: right;">50.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52063</td>
+<td style="text-align: left;">Pomerelle</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">47.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52064</td>
+<td style="text-align: left;">MT1002</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">49.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52065</td>
+<td style="text-align: left;">Treasure</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">39.9</td>
+<td style="text-align: right;">50.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52066</td>
+<td style="text-align: left;">Expresso</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">43.5</td>
+<td style="text-align: right;">68.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52067</td>
+<td style="text-align: left;">HW080169</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">43.3</td>
+<td style="text-align: right;">49.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52068</td>
+<td style="text-align: left;">Attila-1RSMA</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">57.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52069</td>
+<td style="text-align: left;">9259</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">48.6</td>
+<td style="text-align: right;">55.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52070</td>
+<td style="text-align: left;">Cataldo</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">42.5</td>
+<td style="text-align: right;">76.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52071</td>
+<td style="text-align: left;">11010-9, 10013-1</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">43.5</td>
+<td style="text-align: right;">47.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52072</td>
+<td style="text-align: left;">9245</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">42.7</td>
+<td style="text-align: right;">90.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52073</td>
+<td style="text-align: left;">SRRN-6049</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">42.8</td>
+<td style="text-align: right;">49.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52074</td>
+<td style="text-align: left;">Kelse</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">45.1</td>
+<td style="text-align: right;">62.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52075</td>
+<td style="text-align: left;">IDO687</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">48.0</td>
+<td style="text-align: right;">85.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52076</td>
+<td style="text-align: left;">MT1053</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">41.7</td>
+<td style="text-align: right;">92.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52077</td>
+<td style="text-align: left;">9256</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">54.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52078</td>
+<td style="text-align: left;">9253</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">43.7</td>
+<td style="text-align: right;">50.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52079</td>
+<td style="text-align: left;">IDO560</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">42.8</td>
+<td style="text-align: right;">38.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52080</td>
+<td style="text-align: left;">Alturas</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">40.5</td>
+<td style="text-align: right;">77.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52081</td>
+<td style="text-align: left;">UC1551</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">53.6</td>
+<td style="text-align: right;">85.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52082</td>
+<td style="text-align: left;">UC1554</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">78.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52083</td>
+<td style="text-align: left;">SRRN-6050</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">38.9</td>
+<td style="text-align: right;">46.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52084</td>
+<td style="text-align: left;">IDO858</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">42.0</td>
+<td style="text-align: right;">53.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52085</td>
+<td style="text-align: left;">UC1396</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">39.4</td>
+<td style="text-align: right;">38.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52086</td>
+<td style="text-align: left;">PI610750</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">47.8</td>
+<td style="text-align: right;">95.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52087</td>
+<td style="text-align: left;">Hollis</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">39.0</td>
+<td style="text-align: right;">54.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52088</td>
+<td style="text-align: left;">LCS Atomo</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">39.9</td>
+<td style="text-align: right;">37.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52089</td>
+<td style="text-align: left;">UC1395</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">40.4</td>
+<td style="text-align: right;">48.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52090</td>
+<td style="text-align: left;">9241</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">42.0</td>
+<td style="text-align: right;">47.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52091</td>
+<td style="text-align: left;">UC1603</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">39.9</td>
+<td style="text-align: right;">49.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52092</td>
+<td style="text-align: left;">UI Winchester</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">45.1</td>
+<td style="text-align: right;">36.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52093</td>
+<td style="text-align: left;">UC1601</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">44.1</td>
+<td style="text-align: right;">43.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52094</td>
+<td style="text-align: left;">WA8099</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">40.5</td>
+<td style="text-align: right;">74.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52095</td>
+<td style="text-align: left;">CAP151-3</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">48.7</td>
+<td style="text-align: right;">44.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52096</td>
+<td style="text-align: left;">MT0415</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: right;">61.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52097</td>
+<td style="text-align: left;">WHITEBIRD</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">47.5</td>
+<td style="text-align: right;">80.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52098</td>
+<td style="text-align: left;">21TH HRWSN-2126</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">43.4</td>
+<td style="text-align: right;">52.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52099</td>
+<td style="text-align: left;">LCS-Star</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">41.9</td>
+<td style="text-align: right;">69.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52100</td>
+<td style="text-align: left;">Scarlet</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">37.9</td>
+<td style="text-align: right;">55.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52101</td>
+<td style="text-align: left;">UC1552</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">39.5</td>
+<td style="text-align: right;">74.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52102</td>
+<td style="text-align: left;">Jubilee</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">44.7</td>
+<td style="text-align: right;">70.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52103</td>
+<td style="text-align: left;">SRRN-6032</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">44.4</td>
+<td style="text-align: right;">54.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52104</td>
+<td style="text-align: left;">Otis</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">53.6</td>
+<td style="text-align: right;">87.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52105</td>
+<td style="text-align: left;">IDO488</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">42.1</td>
+<td style="text-align: right;">60.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52106</td>
+<td style="text-align: left;">SRRN-6019</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">51.9</td>
+<td style="text-align: right;">57.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52107</td>
+<td style="text-align: left;">SRRN-6047</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">39.2</td>
+<td style="text-align: right;">55.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52108</td>
+<td style="text-align: left;">MT1016</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">41.5</td>
+<td style="text-align: right;">50.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52109</td>
+<td style="text-align: left;">Hahan-1RS</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">42.8</td>
+<td style="text-align: right;">59.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52110</td>
+<td style="text-align: left;">MTHW1060</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">45.6</td>
+<td style="text-align: right;">54.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52111</td>
+<td style="text-align: left;">SpCB-3004</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">41.3</td>
+<td style="text-align: right;">63.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52112</td>
+<td style="text-align: left;">SY Capstone(IDO694?)</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">40.0</td>
+<td style="text-align: right;">66.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52113</td>
+<td style="text-align: left;">UC1643</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">42.1</td>
+<td style="text-align: right;">55.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52114</td>
+<td style="text-align: left;">9246</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">40.4</td>
+<td style="text-align: right;">72.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52115</td>
+<td style="text-align: left;">chewink</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">48.0</td>
+<td style="text-align: right;">78.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52116</td>
+<td style="text-align: left;">MTHW0771</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">40.5</td>
+<td style="text-align: right;">54.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52117</td>
+<td style="text-align: left;">H0900009</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">52.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52118</td>
+<td style="text-align: left;">9225</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">46.1</td>
+<td style="text-align: right;">56.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52119</td>
+<td style="text-align: left;">9254</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">43.0</td>
+<td style="text-align: right;">45.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52120</td>
+<td style="text-align: left;">10014/7</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">40.1</td>
+<td style="text-align: right;">77.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52121</td>
+<td style="text-align: left;">Lassik</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">40.4</td>
+<td style="text-align: right;">62.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52122</td>
+<td style="text-align: left;">Summit 515</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">39.0</td>
+<td style="text-align: right;">67.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52123</td>
+<td style="text-align: left;">MT0861</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">48.2</td>
+<td style="text-align: right;">57.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52124</td>
+<td style="text-align: left;">9249</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">52.2</td>
+<td style="text-align: right;">53.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52125</td>
+<td style="text-align: left;">Lolo</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">51.9</td>
+<td style="text-align: right;">56.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52126</td>
+<td style="text-align: left;">RIL203</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">52.0</td>
+<td style="text-align: right;">58.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52127</td>
+<td style="text-align: left;">MT1027</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">46.0</td>
+<td style="text-align: right;">67.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52128</td>
+<td style="text-align: left;">UC1616</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">47.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52129</td>
+<td style="text-align: left;">UI Stone</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">40.5</td>
+<td style="text-align: right;">69.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52130</td>
+<td style="text-align: left;">UI Pettit</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">42.0</td>
+<td style="text-align: right;">55.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52131</td>
+<td style="text-align: left;">28TH SAWSN-3046</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">40.7</td>
+<td style="text-align: right;">53.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52132</td>
+<td style="text-align: left;">WA8133</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">42.5</td>
+<td style="text-align: right;">82.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52133</td>
+<td style="text-align: left;">SRRN-6109</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">49.0</td>
+<td style="text-align: right;">43.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52134</td>
+<td style="text-align: left;">UC1602</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">46.1</td>
+<td style="text-align: right;">75.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52135</td>
+<td style="text-align: left;">9228</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">64.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52136</td>
+<td style="text-align: left;">21TH HRWSN-2111</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">43.6</td>
+<td style="text-align: right;">54.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52137</td>
+<td style="text-align: left;">Hi-Line</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">38.8</td>
+<td style="text-align: right;">57.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52138</td>
+<td style="text-align: left;">AC BARRIE</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">42.9</td>
+<td style="text-align: right;">49.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52139</td>
+<td style="text-align: left;">H0800103L</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">39.4</td>
+<td style="text-align: right;">77.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52140</td>
+<td style="text-align: left;">IDO868</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">44.8</td>
+<td style="text-align: right;">63.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52141</td>
+<td style="text-align: left;">UC1679</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">42.0</td>
+<td style="text-align: right;">59.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52142</td>
+<td style="text-align: left;">9248</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">39.0</td>
+<td style="text-align: right;">46.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52143</td>
+<td style="text-align: left;">WA8100</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">44.9</td>
+<td style="text-align: right;">53.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52144</td>
+<td style="text-align: left;">MTHW0867</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">47.8</td>
+<td style="text-align: right;">55.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52145</td>
+<td style="text-align: left;">9258</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">47.5</td>
+<td style="text-align: right;">60.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52146</td>
+<td style="text-align: left;">IDO440</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">38.3</td>
+<td style="text-align: right;">65.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52147</td>
+<td style="text-align: left;">Duclair</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">49.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52148</td>
+<td style="text-align: left;">UC896 5+10 Lr34/Yr18 Yr5 Gpc</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">38.8</td>
+<td style="text-align: right;">48.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52149</td>
+<td style="text-align: left;">Blanca Grande 515</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">37.1</td>
+<td style="text-align: right;">52.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52150</td>
+<td style="text-align: left;">9263</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">49.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52151</td>
+<td style="text-align: left;">SRRN-6098</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">48.8</td>
+<td style="text-align: right;">54.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52152</td>
+<td style="text-align: left;">9261</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">37.6</td>
+<td style="text-align: right;">76.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52153</td>
+<td style="text-align: left;">SRRN-6097</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">42.2</td>
+<td style="text-align: right;">85.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52154</td>
+<td style="text-align: left;">9262</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">39.5</td>
+<td style="text-align: right;">58.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52155</td>
+<td style="text-align: left;">SRRN-6030</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">38.0</td>
+<td style="text-align: right;">76.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52156</td>
+<td style="text-align: left;">HR07024-5</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">37.8</td>
+<td style="text-align: right;">54.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52157</td>
+<td style="text-align: left;">UI Lochsa</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">41.5</td>
+<td style="text-align: right;">65.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52158</td>
+<td style="text-align: left;">CAP34-1</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">45.5</td>
+<td style="text-align: right;">53.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52159</td>
+<td style="text-align: left;">HW090071M</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">46.1</td>
+<td style="text-align: right;">65.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52160</td>
+<td style="text-align: left;">UC1599</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">38.8</td>
+<td style="text-align: right;">63.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52161</td>
+<td style="text-align: left;">MTHW1069</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">45.9</td>
+<td style="text-align: right;">67.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52162</td>
+<td style="text-align: left;">UI Platinum</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">50.0</td>
+<td style="text-align: right;">62.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52163</td>
+<td style="text-align: left;">Blanca Fuerte</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">46.8</td>
+<td style="text-align: right;">52.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52164</td>
+<td style="text-align: left;">Berkut</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">45.8</td>
+<td style="text-align: right;">57.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52165</td>
+<td style="text-align: left;">SRRN-6027</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">43.2</td>
+<td style="text-align: right;">51.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52166</td>
+<td style="text-align: left;">IDO686</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">47.1</td>
+<td style="text-align: right;">61.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52167</td>
+<td style="text-align: left;">SRRN-6038</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">38.1</td>
+<td style="text-align: right;">69.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52168</td>
+<td style="text-align: left;">HR07005-3</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">43.7</td>
+<td style="text-align: right;">62.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52169</td>
+<td style="text-align: left;">IDO377s</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">59.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52170</td>
+<td style="text-align: left;">MT0802</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">39.9</td>
+<td style="text-align: right;">64.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform data from wide to long format</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"YLD"</span>),  <span class="co"># Select columns that start with 'YLD'</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Year_Rep"</span>,      <span class="co"># New column for year</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Value"</span>         <span class="co"># New column for values</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the year from 'Year_Rep' and create a new column 'Year'</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> long_data <span class="sc">%&gt;%</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">sub</span>(<span class="st">"-.*"</span>, <span class="st">""</span>, Year_Rep))  </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boxplot of 'Value' by 'Year'</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>long_data, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Value, <span class="at">fill=</span>Year)) <span class="sc">+</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span>                      <span class="co"># Add boxplot layer</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                     <span class="co"># Use a minimal theme</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Boxplot by Year"</span>, <span class="at">x=</span><span class="st">"Year"</span>, <span class="at">y=</span><span class="st">"Value"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a density plot of 'Value' by 'Year'</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>long_data, <span class="fu">aes</span>(<span class="at">x=</span>Value, <span class="at">fill=</span>Year)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span>             <span class="co"># Add density layer with transparency</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                     <span class="co"># Use a minimal theme</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Density Plot by Year"</span>, <span class="at">x=</span><span class="st">"Value"</span>, <span class="at">y=</span><span class="st">"Density"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="describe" class="level1">
+<h1><strong>Describe</strong></h1>
+<p>The dataset comprises a 2D table format, focusing on wheat as the primary item. It includes three distinct attributes: Order, YLD-2017-AB-Ran, YLD-2017-Soda-Ran, and YLD-2017-Walla-Ran, each with 170 items.</p>
+<ol type="1">
+<li><p><strong>Order</strong>: This attribute is ordinal and sequential in nature. It represents a series of 170 unique identifiers for the data entries.</p></li>
+<li><p><strong>YLD-2017-AB-Ran</strong>: This quantitative attribute reflects a range of values between 73.8 and 101.9. It is associated with the geographical coordinates of 42.96° N latitude and 112.83° W longitude, which corresponds to the AB region.</p></li>
+<li><p><strong>YLD-2017-Soda-Ran</strong>: Another quantitative attribute, it spans a range from 37.1 to 61.4. The Soda region, located at 42.6544° N latitude and 111.6047° W longitude, is the geographical reference for this attribute.</p></li>
+<li><p><strong>YLD-2017-Walla-Ran</strong>: Similar to the other YLD attributes, this is also quantitative, with a range of 36.2 to 95.1. It is linked to the Walla region, situated at 46.0646° N latitude and 118.3430° W longitude.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
