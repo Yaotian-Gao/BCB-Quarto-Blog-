@@ -1,0 +1,26 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/Yaotian-Gao
+---
+
+# Name
+
+Yaotian Gao
+
+# Short Description
+
+I am an international student from China, currently involved in wheat breeding and genomic research under Dr. Jianli Chen's project.
+
+# Education
+
+| Degrees | Year         | Major                      | Institution                   |
+|---------|--------------|----------------------------|-------------------------------|
+| BS      | 2014-2018    | Agronomy                   | China Agricultural University |
+| MS      | 2018-2020    | Crop Genetics and Breeding | China Agricultural University |
+| Ph.D.   | 2021-Present | Plant Science              | University of Idaho           |

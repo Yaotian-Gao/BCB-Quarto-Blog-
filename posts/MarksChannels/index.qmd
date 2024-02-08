@@ -1,0 +1,156 @@
+---
+title: "ASSIGNMENT 4"
+subtitle: "Marks and Channels"
+author: "Yaotian Gao"
+date: "2024-02-08"
+categories: [Assignment, DataViz]
+image: "1.png"
+code-fold: true
+code-tools: true
+description: "A clever description that describes the stuff"
+---
+
+```{r}
+library(dplyr) 
+library(tidyr) 
+library(ggplot2)
+
+# Read the dataset from a specified file path
+data = read.csv("E:/01-文件/04-UI文件/2401-【课程】BCB/BCB/BCB520Practice/data.csv")
+
+# Display the dataset in a nicely formatted table using knitr package
+knitr::kable(data)
+
+# Transform data from wide to long format
+long_data <- data %>% 
+  pivot_longer(
+    cols = starts_with("YLD"),  # Select columns that start with 'YLD'
+    names_to = "Year_Rep",      # New column for year
+    values_to = "Value"         # New column for values
+  )
+
+# Extract the year from 'Year_Rep' and create a new column 'Year'
+long_data <- long_data %>%
+  mutate(Year = sub("-.*", "", Year_Rep))  
+
+ggplot(data=long_data, aes(x=Year, y=Value, fill=Year)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  theme_minimal() +
+  labs(title="Figure 1: Average Yield by Location",
+       x="Location", y="Average Yield") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+# 加载必要的包
+library(ggplot2)
+
+# 创建数据框
+data <- data.frame(
+  Region = c("YLD-2017-AB-Ran", "YLD-2017-Soda-Ran", "YLD-2017-Walla-Ran"),
+  Average = c(87.82941176, 44.55117647, 64.11235294)
+)
+
+# 转换数据框以适用于ggplot
+data_long <- reshape2::melt(data, id.vars = "Region")
+
+# 创建热力图
+ggplot(data_long, aes(x = variable, y = Region, fill = value)) +
+  geom_tile() +
+  scale_fill_gradient(low = "blue", high = "red") +
+  labs(title="Figure 2: Misleading Visualization Using Color Intensity",x = "", y = "Location", fill = "Average Yield") +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+
+
+ggplot(data=long_data, aes(x=Value, fill=Year)) +
+  geom_density(alpha=0.5) +            
+   scale_fill_manual(values=c("blue", "red", "green"))+
+  theme_minimal() +                     # Use a minimal theme
+  labs(title="Figure 3: Yield by Location",
+       x="Location", y="Average Value", fill="Color Intensity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+ggplot(data=long_data, aes(x=Value, fill=Year)) +
+  geom_density(alpha=0.5) +            
+   scale_fill_manual(values=c("lightgrey", "grey", "darkgrey"))+
+  theme_minimal() +                     # Use a minimal theme
+  labs(title="Figure 4: Misleading Visualization Using Color",
+       x="Location", y="Average Value", fill="Color Intensity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+ggplot(data=long_data, aes(x=Year, y=Value)) +  # 移除 fill=Year 来避免自动颜色填充
+  geom_boxplot() +                              # 添加箱线图层
+  theme_minimal() +                             # 使用简洁主题
+  labs(title="Figure 5: Boxplot by Location", x="Location", y="BU/Ac") +  # 定制图表标题和轴标签
+  theme(legend.position="none")                 # 移除图例
+
+ggplot(data=long_data, aes(x=Year, y=Value, fill=Year)) +
+  geom_boxplot() +                      # Add boxplot layer
+  theme_minimal() +                     # Use a minimal theme
+  labs(title="Figure 6: Misleading Visualization Using Color", x="Location", y="BU/Ac")  # Add labels
+
+```
+```{r}
+# 加载必要的库
+library(ggplot2)
+library(dplyr)
+library(tidyr) # 用于pivot_longer函数
+
+# 从给定路径读取CSV文件
+file_path <- "E:/01-文件/04-UI文件/2401-【课程】BCB/BCB/BCB-Quarto Blog-/posts/MarksChannels/Average temperature.csv"
+data <- read.csv(file_path, stringsAsFactors = FALSE)
+
+# 转换数据结构以适应绘图需要
+data_long <- pivot_longer(data, cols = Mar:Aug, names_to = "Month", values_to = "Temperature")
+
+# 转换Month为有序因子，以确保它们按正确的顺序显示
+data_long$Month <- factor(data_long$Month, levels = c('Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'))
+
+# 为不同的地点设置不同的形状
+shapes <- c("Walla" = 16, "Soda" = 17, "Aberdeen" = 12) # 16=实心圆，17=实心三角形，18=实心菱形
+
+# 为不同的地点设置颜色，并突出Aberdeen
+colors <- c("Walla" = "grey", "Soda" = "grey", "Aberdeen" = "red") 
+
+# 使用ggplot2创建折线图
+p <- ggplot(data_long, aes(x = Month, y = Temperature, group = Location, color = Location, shape = Location)) +
+  geom_line() + # 添加折线
+  geom_point(size = 3) + # 添加点，并设置大小
+  scale_shape_manual(values = shapes) + # 应用形状设置
+  scale_color_manual(values = colors) + # 应用颜色设置
+  theme_minimal() + # 使用简洁主题
+  ggtitle("Figure 7: Average Monthly Temperature During Wheat Growing Season(Highlight)") + # 添加标题
+  xlab("Month") + # X轴标签
+  ylab("Temperature (°F)") # Y轴标签
+
+# 打印绘图
+print(p)
+
+# 为不同的地点设置颜色，并突出Aberdeen
+colors1 <- c("Walla" = "grey", "Soda" = "grey", "Aberdeen" = "grey") 
+
+# 使用ggplot2创建折线图
+p <- ggplot(data_long, aes(x = Month, y = Temperature, group = Location, color = Location, shape = Location)) +
+  geom_line() + # 添加折线
+  geom_point(size = 3) + # 添加点，并设置大小
+  scale_shape_manual(values = shapes) + # 应用形状设置
+  scale_color_manual(values = colors1) + # 应用颜色设置
+  theme_minimal() + # 使用简洁主题
+  ggtitle("Figure 8: Average Monthly Temperature During Wheat Growing Season(Common)") + # 添加标题
+  xlab("Month") + # X轴标签
+  ylab("Temperature (°F)") # Y轴标签
+
+# 打印绘图
+print(p)
+
+```
+
+**Describe**:
+
+In Figure 1, I utilized lines as markers and position as the channel. Since position on a common scale is the highest-ranking channel for ordered attributes, it allows for easy differentiation of production levels across different locations.In Figure 2, I again used lines as markers but employed color as the channel. Because color is a lower-ranking channel for ordered attributes, it does not easily distinguish production levels across different locations.
+
+In Figures 3 and 4, I used lines and areas as marks, differentiating them using color and position. The distinction is that, in Figure 3, I used contrasting colors like blue, red, and green to differentiate various locations, whereas in Figure 4, I used shades of gray, including light gray, gray, and dark gray, which made the chart more difficult to distinguish.
+
+In Figures 5 and 6, both utilized lines and areas as marks, with position as the differentiator. The difference in Figure 6 is the addition of color as an extra channel. While redundancy can be desirable, area interferes with hue, with larger shapes having more visual salience.
+
+In Figures 7 and 8, I demonstrated the use of lines to represent the average monthly temperatures during the wheat growing season across different locations. The key difference is that in Figure 7, I used a red popout to highlight Aberdeen's temperature curve, making it easy to locate. In contrast, in Figure 8, I used the same color for all three locations, making it difficult to immediately identify the curve for Aberdeen.

@@ -1,0 +1,64 @@
+---
+title: "BCB-assignment2"
+author: "Yaotian Gao"
+date: "2024-02-06"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+# **Dataset**
+
+```{r}
+# Load necessary libraries
+library(dplyr) 
+library(tidyr) 
+library(ggplot2)
+
+# Read the dataset from a specified file path
+data = read.csv("E:/01-文件/04-UI文件/2401-【课程】BCB/BCB/BCB520Practice/data.csv")
+
+# Display the dataset in a nicely formatted table using knitr package
+knitr::kable(data)
+
+# Transform data from wide to long format
+long_data <- data %>% 
+  pivot_longer(
+    cols = starts_with("YLD"),  # Select columns that start with 'YLD'
+    names_to = "Year_Rep",      # New column for year
+    values_to = "Value"         # New column for values
+  )
+
+# Extract the year from 'Year_Rep' and create a new column 'Year'
+long_data <- long_data %>%
+  mutate(Year = sub("-.*", "", Year_Rep))  
+
+ggplot(data=long_data, aes(x=Year, y=Value, fill=Year)) +
+  geom_boxplot() +                      # Add boxplot layer
+  theme_minimal() +                     # Use a minimal theme
+  labs(title="Boxplot by Year", x="Location", y="BU/Ac")  # Add labels
+
+# Create a density plot of 'Value' by 'Year'
+ggplot(data=long_data, aes(x=Value, fill=Year)) +
+  geom_density(alpha=0.5) +             # Add density layer with transparency
+  theme_minimal() +                     # Use a minimal theme
+  labs(title="Density Plot by Location", x="Yield", y="Density")  # Add labels
+
+```
+
+# **Describe**
+
+The dataset comprises a 2D table format, focusing on wheat as the primary item. It includes three distinct attributes: Order, YLD-2017-AB-Ran, YLD-2017-Soda-Ran, and YLD-2017-Walla-Ran, each with 170 items.
+
+1.  **Order**: This attribute is ordinal and sequential in nature. It represents a series of 170 unique identifiers for the data entries.
+
+2.  **YLD-2017-AB-Ran**: This quantitative attribute reflects a range of values between 73.8 and 101.9. It is associated with the geographical coordinates of 42.96° N latitude and 112.83° W longitude, which corresponds to the AB region.
+
+3.  **YLD-2017-Soda-Ran**: Another quantitative attribute, it spans a range from 37.1 to 61.4. The Soda region, located at 42.6544° N latitude and 111.6047° W longitude, is the geographical reference for this attribute.
+
+4.  **YLD-2017-Walla-Ran**: Similar to the other YLD attributes, this is also quantitative, with a range of 36.2 to 95.1. It is linked to the Walla region, situated at 46.0646° N latitude and 118.3430° W longitude.
+
+**TASK ABSTRACTION**
+
+1.  Discover Outliers where production data exists within the same location;
+
+2.  Compare the distribution of data across different locations.

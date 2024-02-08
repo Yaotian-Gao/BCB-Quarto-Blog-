@@ -1,0 +1,12 @@
+---
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2024-02-03"
+categories: [news]
+---
+
+Welcome to Yaotian's Blog!
+
+![](thumbnail.jpg)
+
+Let's start!
