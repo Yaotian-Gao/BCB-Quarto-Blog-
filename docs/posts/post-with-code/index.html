@@ -1444,11 +1444,10 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> long_data <span class="sc">%&gt;%</span></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">sub</span>(<span class="st">"-.*"</span>, <span class="st">""</span>, Year_Rep))  </span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boxplot of 'Value' by 'Year'</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>long_data, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Value, <span class="at">fill=</span>Year)) <span class="sc">+</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span>                      <span class="co"># Add boxplot layer</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                     <span class="co"># Use a minimal theme</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Boxplot by Year"</span>, <span class="at">x=</span><span class="st">"Year"</span>, <span class="at">y=</span><span class="st">"Value"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>long_data, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Value, <span class="at">fill=</span>Year)) <span class="sc">+</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span>                      <span class="co"># Add boxplot layer</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                     <span class="co"># Use a minimal theme</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Boxplot by Year"</span>, <span class="at">x=</span><span class="st">"Location"</span>, <span class="at">y=</span><span class="st">"BU/Ac"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1460,7 +1459,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>long_data, <span class="fu">aes</span>(<span class="at">x=</span>Value, <span class="at">fill=</span>Year)) <span class="sc">+</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span>             <span class="co"># Add density layer with transparency</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>                     <span class="co"># Use a minimal theme</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Density Plot by Year"</span>, <span class="at">x=</span><span class="st">"Value"</span>, <span class="at">y=</span><span class="st">"Density"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Density Plot by Location"</span>, <span class="at">x=</span><span class="st">"Yield"</span>, <span class="at">y=</span><span class="st">"Density"</span>)  <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1478,6 +1477,11 @@ Attaching package: 'dplyr'</code></pre>
 <li><p><strong>YLD-2017-AB-Ran</strong>: This quantitative attribute reflects a range of values between 73.8 and 101.9. It is associated with the geographical coordinates of 42.96° N latitude and 112.83° W longitude, which corresponds to the AB region.</p></li>
 <li><p><strong>YLD-2017-Soda-Ran</strong>: Another quantitative attribute, it spans a range from 37.1 to 61.4. The Soda region, located at 42.6544° N latitude and 111.6047° W longitude, is the geographical reference for this attribute.</p></li>
 <li><p><strong>YLD-2017-Walla-Ran</strong>: Similar to the other YLD attributes, this is also quantitative, with a range of 36.2 to 95.1. It is linked to the Walla region, situated at 46.0646° N latitude and 118.3430° W longitude.</p></li>
+</ol>
+<p><strong>TASK ABSTRACTION</strong></p>
+<ol type="1">
+<li><p>Discover Outliers where production data exists within the same location;</p></li>
+<li><p>Compare the distribution of data across different locations.</p></li>
 </ol>
 
 

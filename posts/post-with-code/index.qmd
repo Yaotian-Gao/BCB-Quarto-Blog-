@@ -1,5 +1,5 @@
 ---
-title: "BCB-assignment2"
+title: "BCB-assignment2&3"
 author: "Yaotian Gao"
 date: "2024-02-06"
 categories: [news, code, analysis]
