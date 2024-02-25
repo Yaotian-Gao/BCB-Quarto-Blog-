@@ -30,7 +30,7 @@ description: "A analysis for NHL draft"
 
         We can change the axis labels from "round" to "NHL Draft Round" and "NHL games" to "Number of NHL Games Played". For the figure caption, we can write "Scatterplot of NHL Games Played by Draft Round".
 
-        Task:To help users understand the participation of players in NHL games from different draft rounds.
+        Task:To help users analysis the participation of players in NHL games from different draft rounds.
 
         Points (marks):Points
 
@@ -40,7 +40,7 @@ description: "A analysis for NHL draft"
 
 -   **Key-Value pairs:** Looks like we are using "round" as a continuous variable. Can we change this to an ordered factor?
 
-    -   Although "round" has a certain order, the "distance" between two "rounds" is not continuous. For example, the gap between the first round and the second round is not the same as the gap between the seventh round and the eighth round. Changing "round" to an ordered factor can more accurately reflect this relationship.
+    -   Although "round" has a certain order, the "distance" between two "rounds" is not continuous. Changing "round" to an ordered factor can more accurately reflect this relationship.
 
 # **EXPANDED SCATTERPLOT**
 
@@ -172,7 +172,6 @@ description: "A analysis for NHL draft"
 
 ![](images/image-1936807426.png)
 
-(None)
 
 # **HEATMAP**
 
