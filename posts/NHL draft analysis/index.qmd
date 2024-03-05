@@ -10,6 +10,25 @@ code-tools: true
 description: "A analysis for NHL draft"
 ---
 
+# DIVERGENCE
+
+-   Enough esoteric wandering. The original version of this assignment focused on the relative value of draft picks in the NHL. This version has a more specific question. What might picks in the range of pick 31 conceivably yield? How often do picks in that range yield players of Elias Lindholm's value?
+
+-   I guess we'd better figure out what Elias Lindholm brings to the table.
+
+-   Can you find him in our existing data? Can you think of a way to highlight him in the context of number of games played? What other kinds of data might we need to fairly evaluate Lindholm and pick 31?
+
+-   You will be surprised how these seemingly simple questions force you to explore the nuances of working with and visualizing tabular data.
+
+# Answer
+
+-   It seems that picks around the 31st position don't typically yield high-value players. Based on the SCATTERPLOT WITH OVERALL DRAFT POSITION and SCATTERPLOT SUMMARY, player performance (measured by Totgames) decreases as draft rounds progress. Therefore, it's unlikely the Canucks would draft a player as consistently impactful as Elias Lindholm with that pick.
+
+-   To make a fair evaluation of the trade's worth, we need to know Lindholm's post-draft years.Looking at "Postdraft years and NHLgames total" suggests that players generally peak within 4-6 years. So knowing Lindholm's current performance is crucial.This will help us compare his experience to prospects the Canucks could draft at 31.
+
+
+(The following answer is still based on the 2023-year questions)
+
 # **SIMPLE SCATTERPLOT**
 
 ## Picture
@@ -171,7 +190,6 @@ description: "A analysis for NHL draft"
 ![](images/image-442292926.png)
 
 ![](images/image-1936807426.png)
-
 
 # **HEATMAP**
 
