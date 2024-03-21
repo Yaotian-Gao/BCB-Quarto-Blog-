@@ -9,21 +9,22 @@ format: html
 editor: visual
 image: "1.png"
 code-fold: true
+toc: true
 ---
 
 # 1. Preamble
 
 The University of Idaho (UI) relies on research funding from various sponsors to support its academic mission and drive innovation. Understanding the current state and future outlook of the university's research funding portfolio is crucial for informed decision-making by university leadership. This post aims to address three key questions:
 
-1.  What is the current state of UI's active research awards, including their duration, amount, and principal investigators?
-2.  How has the proportional representation of new awards from different funding sources changed over the past 5 to 10 years, and are there any notable trends?
-3.  How does UI's performance in securing research funding compare to that of peer institutions?
+1.  **What is the current state of UI's active research awards, including their duration, amount, and principal investigators?**
+2.  **How has the proportional representation of new awards from different funding sources changed over the past 5 to 10 years, and are there any notable trends?**
+3.  **How does UI's performance in securing research funding compare to that of peer institutions?**
 
 By analyzing data related to these questions, this post will provide valuable insights into UI's research funding landscape. The findings will help university leadership understand the institution's strengths, identify areas for improvement, and make data-driven decisions to support the university's research goals. Furthermore, this analysis will contribute to the university's strategic planning efforts and help ensure the sustainability and growth of its research enterprise.
 
 # 2. Data and Code
 
-Data Sources Summary: This analysis utilizes data from four major U.S. research funding agencies: the Department of Agriculture (NIFA), Department of Energy, National Institutes of Health (NIH), and National Science Foundation (NSF). The data was obtained from the following sources:
+Data Sources Summary: This analysis utilizes data from four major U.S. research funding agencies: the Department of Agriculture (USDA NIFA), Department of Energy(DOE), National Institutes of Health (NIH), and National Science Foundation (NSF). The data was obtained from the following sources:
 
 | Data Source               | Description                                                         | URL                                                                                               |
 |-------------------|---------------------------|---------------------------|
@@ -60,9 +61,9 @@ To investigate the trends in new awards from different institutions to the Unive
 
 The chart reveals that from 2015 to 2021, the number of new projects from USDA showed an initial decline (2015-2018) followed by an increase (2018-2021), maintaining an overall upward trend. However, after 2021, the number of new projects rapidly decreased (2021-2023). For NSF projects, the overall trend remained stable, with the number of projects per year consistently between 10 and 20 over the past decade. Regarding NIH projects, there was a sharp increase in 2015, reaching 35 projects, followed by a steady decline. Although there was a rebound to nearly 20 projects in 2018, it eventually plummeted again. Despite a slight recovery in the past 3 years, the number of projects remains between 0 and 5, similar to the level 10 years ago.
 
-DOE only had projects in 2020 and 2021, with no new projects granted subsequently.
+*DOE only had projects in 2020 and 2021, with no new projects granted subsequently.*
 
-In summary, USDA and NIH have experienced overall declining trends in new projects, with USDA showing more fluctuations and NIH demonstrating a more consistent decrease. NSF, on the other hand, has maintained a relatively stable number of new projects over the past decade. These trends suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding, while leveraging the stability of NSF support. Further investigation into the potential causes behind these trends, such as changes in funding priorities or shifts in UI's research focus, could provide valuable insights for informed decision-making and strategic planning.
+In summary, **USDA and NIH have experienced overall declining trends in new projects**, with USDA showing more fluctuations and NIH demonstrating a more consistent decrease. **NSF, on the other hand, has maintained a relatively stable number of new projects over the past decade.** These trends suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding, while leveraging the stability of NSF support. Further investigation into the potential causes behind these trends, such as changes in funding priorities or shifts in UI's research focus, could provide valuable insights for informed decision-making and strategic planning.
 
 ![](images/Number%20of%20New%20Awards.png)
 
@@ -112,18 +113,18 @@ Overall, UI has some competitiveness in USDA projects but falls behind Montana S
 
 This analysis aimed to provide a comprehensive understanding of the University of Idaho's (UI) research funding portfolio by addressing three key questions: (1) the current state of active research awards, (2) trends in the proportional representation of new awards from various funding sources, and (3) UI's performance compared to peer institutions.
 
-The investigation of active research awards revealed that for NIH and NSF, the top five principal investigators (PIs) receive significantly higher funding amounts compared to other researchers, indicating a "head" trend in funding distribution. The analysis of new award trends over the past decade showed that USDA and NIH experienced overall declining trends, with USDA exhibiting more fluctuations and NIH demonstrating a more consistent decrease. In contrast, NSF maintained a relatively stable number of new projects. These findings suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding while leveraging the stability of NSF support.
+The investigation of active research awards revealed that for NIH and NSF, the top five principal investigators (PIs) receive significantly higher funding amounts compared to other researchers, indicating a "head" trend in funding distribution. The analysis of new award trends over the past decade showed that USDA and NIH experienced overall declining trends, with USDA exhibiting more fluctuations and NIH demonstrating a more consistent decrease. In contrast, NSF maintained a relatively stable number of new projects. **These findings suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding while leveraging the stability of NSF support.**
 
-The comparative analysis of UI's performance against peer institutions employed a metric based on the average annual funding per project, which considered both total funding and the number of projects. Overall, UI performed better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University. UI's competitiveness varied across sponsors, with a relatively weak position in DOE projects, less competitiveness in NIH funding compared to most peers, a strong and consistent competitive edge in NSF projects, and some competitiveness in USDA projects, although falling behind Montana State University and Washington State University.
+The comparative analysis of UI's performance against peer institutions employed a metric based on the average annual funding per project, which considered both total funding and the number of projects. **Overall, UI performed better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University.** UI's competitiveness varied across sponsors, with a relatively weak position in DOE projects, less competitiveness in NIH funding compared to most peers, a strong and consistent competitive edge in NSF projects, and some competitiveness in USDA projects, although falling behind Montana State University and Washington State University.
 
 These findings provide valuable insights into UI's research funding landscape, highlighting strengths, areas for improvement, and potential strategies for ensuring the sustainability and growth of its research enterprise. The analysis emphasizes the importance of diversifying funding sources, particularly in light of declining trends from certain sponsors, and focusing on maintaining and enhancing competitiveness in areas of strength, such as NSF projects. Furthermore, the comparative analysis with peer institutions offers a benchmark for evaluating UI's performance and identifies potential areas for learning and collaboration.
 
-# Supplementary Information
+# Supplementary Materials
 
 ## Tabel S1: Active Research Awards by Sponsor, Principal Investigator, and End Date
 
 | Instrction | Start year | End year | Award amount | PI                                  |
-|--------------|--------------|--------------|--------------|----------------|
+|---------------|---------------|---------------|---------------|---------------|
 | DOE        | 2020       | 2024     | 603903       | Yager, Elowyn                       |
 | DOE        | 2021       | 2024     | 1404162      | Marx, Christopher                   |
 | DOE        | 2021       | 2024     | 1519359      | Vasdekis, Andreas                   |
@@ -233,27 +234,27 @@ These findings provide valuable insights into UI's research funding landscape, h
 | NSF        | 2023       | 2028     | 250000       | Shirley Luckhart                    |
 | NSF        | 2023       | 2028     | 20000000     | Andrew D Kliskey                    |
 
-## Code fold
+## Code Fold
 
 ### Q1
 
-```{r}
+```{r, eval=FALSE}
 
-#比例图
+# Scale drawing
 library(ggplot2)
 
-# 创建数据框
+# Create data frame
 data <- data.frame(
   Sponsor = c("DOE", "NSF", "NIH"),
   Expiring_2024 = c(4, 22, 7),
   Active_After_2024 = c(0, 37, 38)
 )
 
-# 将数据框转换为长格式
+# Converts the data frame to a long format
 data_long <- tidyr::pivot_longer(data, cols = c("Expiring_2024", "Active_After_2024"), 
                                  names_to = "Status", values_to = "Count")
 
-# 绘制分组柱状图
+# Draw a group bar chart
 ggplot(data_long, aes(x = Sponsor, y = Count, fill = Status)) + 
   geom_col(position = "dodge") +
   geom_text(aes(label = Count), position = position_dodge(width = 0.9), 
@@ -270,27 +271,27 @@ ggplot(data_long, aes(x = Sponsor, y = Count, fill = Status)) +
 
 library(ggplot2)
 library(dplyr)
-# 读取数据
+# Read data
 
 data <- read.csv("NSF-UI.csv", stringsAsFactors = FALSE)
 
-# 筛选2024年及以后的项目
+# Screening projects for 2024 and beyond
 data_filtered <- data %>% 
   filter(End.year >= 2024) %>%
   select(End.year, Award.amount, PI)
   
-# 将2024年之后的年份替换为"After 2024"
+# Replace years After 2024 with "After 2024"
 data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
 
 
-# 按Award.amount降序排列
+# Sorted in descending order by Award.amount
 data_filtered <- data_filtered %>%
   arrange(desc(Award.amount))
 
-# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+# Convert PI to a factor variable and arrange the levels in order of Award.amount
 data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
 
-# 绘制柱形图
+# Draw a column chart
 ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
   geom_col() +
   #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
@@ -305,27 +306,27 @@ ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
 #DOE
 library(ggplot2)
 library(dplyr)
-# 读取数据
+# Read data
 
 data <- read.csv("DOE-UI.csv", stringsAsFactors = FALSE)
 
-# 筛选2024年及以后的项目
+# Screening projects for 2024 and beyond
 data_filtered <- data %>% 
   filter(End.year >= 2024) %>%
   select(End.year, Award.amount, PI)
   
-# 将2024年之后的年份替换为"After 2024"
+# Replace years After 2024 with "After 2024"
 data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
 
 
-# 按Award.amount降序排列
+# Sorted in descending order by Award.amount
 data_filtered <- data_filtered %>%
   arrange(desc(Award.amount))
 
-# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+# Convert PI to a factor variable and arrange the levels in order of Award.amount
 data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
 
-# 绘制柱形图
+# Draw a column chart
 ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
   geom_col() +
   #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
@@ -340,27 +341,26 @@ ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
 #NIH
 library(ggplot2)
 library(dplyr)
-# 读取数据
+# Draw a column chart
 
 data <- read.csv("NIH-UI.csv", stringsAsFactors = FALSE)
 
-# 筛选2024年及以后的项目
+# Filter projects from 2024 and onwards
 data_filtered <- data %>% 
   filter(End.year >= 2024) %>%
   select(End.year, Award.amount, PI)
   
-# 将2024年之后的年份替换为"After 2024"
+# Replace years after 2024 with "After 2024"
 data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
 
-
-# 按Award.amount降序排列
+# Sort by Award.amount in descending order
 data_filtered <- data_filtered %>%
   arrange(desc(Award.amount))
 
-# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+# Convert PI to a factor variable and order levels by Award.amount
 data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
 
-# 绘制柱形图
+# Draw a column chart
 ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
   geom_col() +
   #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
@@ -371,47 +371,46 @@ ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "bottom",
         plot.title = element_text(hjust = 0.5, face = "bold"))
+
 ```
 
 ### Q2
 
-```{r}
-Sponsers<-c("DOE","NIH","NSF","USDA")
+```{r, eval=FALSE}
+Sponsers <- c("DOE", "NIH", "NSF", "USDA")
 
-for (Sponser in Sponsers){
+for (Sponser in Sponsers) {
 
-# 读取CSV文件
-data <- read.csv(paste0(Sponser,"-all.csv"), header = TRUE, stringsAsFactors = FALSE)
+  # Read the CSV file
+  data <- read.csv(paste0(Sponser, "-all.csv"), header = TRUE, stringsAsFactors = FALSE)
 
-# 按照Start year分组，计算每年的Award amount总和和项目数量
-result <- aggregate(cbind(Award.amount, n = 1) ~ University + Start.year, data = data, FUN = sum)
+  # Group by Start year, calculate the total Award amount and number of projects per year
+  result <- aggregate(cbind(Award.amount, n = 1) ~ University + Start.year, data = data, FUN = sum)
 
-# 重命名列
-colnames(result) <- c("University", "Start.year", "Award.amount", "n")
+  # Rename columns
+  colnames(result) <- c("University", "Start.year", "Award.amount", "n")
 
-# 按照University和Start.year排序
-result <- result[order(result$University, result$Start.year), ]
+  # Sort by University and Start.year
+  result <- result[order(result$University, result$Start.year), ]
 
-# 输出结果
-print(result)
+  # Output results
+  print(result)
 
-write.csv(result, file = paste0("E:/01-文件/04-UI文件/2401-【课程】BCB/BCB-Mid/00-Temp/Q2/",Sponser,"-all-Q2.csv"), row.names = FALSE)
+  write.csv(result, file = paste0("E:/01-文件/04-UI文件/2401-【课程】BCB/BCB-Mid/00-Temp/Q2/", Sponser, "-all-Q2.csv"), row.names = FALSE)
 
 }
 
-# 读取CSV文件
+# Read the CSV file
 data <- read.csv("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q2\\UI统计表.csv", header = TRUE, stringsAsFactors = FALSE)
 
-# 加载ggplot2包
+# Load the ggplot2 package
 library(ggplot2)
 
-# 筛选2013年至2023年的数据
+# Filter data from 2013 to 2023
 data_filtered <- subset(data, Start.year >= 2013 & Start.year <= 2023)
 
-# 绘制折线图
-ggplot(data_filtered, aes(x = Start.year, y = n, color = Sponser
-, linetype = Sponser
-)) +
+# Draw a line chart
+ggplot(data_filtered, aes(x = Start.year, y = n, color = Sponser, linetype = Sponser)) +
   geom_line(size = 1) +
   scale_color_manual(values = c("USDA" = "blue", "NSF" = "green", "NIH" = "orange", "DOE" = "red")) +
   scale_linetype_manual(values = c("USDA" = "solid", "NSF" = "dashed", "NIH" = "dotted", "DOE" = "dotdash")) +
@@ -424,29 +423,30 @@ ggplot(data_filtered, aes(x = Start.year, y = n, color = Sponser
         legend.text = element_text(size = 12),
         legend.position = "bottom") +
   scale_x_continuous(breaks = seq(2013, 2023, by = 1))
+
 ```
 
 ### Q3
 
-```{r}
-# 定义文件名列表
+```{r, eval=FALSE}
+# Define list of file names
 file_names <- c("DOE-all-Q2.csv", "NIH-all-Q2.csv", "NSF-all-Q2.csv", "USDA-all-Q2.csv")
 
-# 定义输出文件名列表
+# Define list of output file names
 output_names <- c("DOE-all-Q3.csv", "NIH-all-Q3.csv", "NSF-all-Q3.csv", "USDA-all-Q3.csv")
 
-# 循环处理每个文件
+# Loop through each file
 for (i in seq_along(file_names)) {
-  # 读取文件
+  # Read the file
   data <- read.csv(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", file_names[i]), header = TRUE, stringsAsFactors = FALSE)
   
-  # 创建一个新的数据框来存储结果
+  # Create a new data frame to store results
   result <- data.frame(University = character(), Start.year = numeric(), Difference.Value = numeric(), stringsAsFactors = FALSE)
   
-  # 获取University of Idaho的数据
+  # Get data for University of Idaho
   ui_data <- data[data$University == "University of Idaho", ]
   
-  # 计算每个学校的Difference.Value值
+  # Calculate Difference.Value for each university
   for (j in unique(data$Start.year)) {
     year_data <- data[data$Start.year == j, ]
     ui_mean <- ui_data$Mean[ui_data$Start.year == j]
@@ -461,35 +461,35 @@ for (i in seq_along(file_names)) {
     }
   }
   
-  # 将结果写入CSV文件
+  # Write results to a CSV file
   write.csv(result, paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", output_names[i]), row.names = FALSE)
 }
 
-# 加载所需的包
+# Load required packages
 library(ggplot2)
 library(dplyr)
 
-# 定义文件名列表
-file_names <- c("DOE-all-Q3.csv", "NIH-all-Q3.csv", "NSF-all-Q3.csv", "USDA-all-Q3.csv","Overall-all-Q3.csv")
+# Define list of file names
+file_names <- c("DOE-all-Q3.csv", "NIH-all-Q3.csv", "NSF-all-Q3.csv", "USDA-all-Q3.csv", "Overall-all-Q3.csv")
 
-# 定义输出图像名列表
-output_names <- c("DOE_plot.png", "NIH_plot.png", "NSF_plot.png", "USDA_plot.png","Overall-all-Q3.png")
+# Define list of output image names
+output_names <- c("DOE_plot.png", "NIH_plot.png", "NSF_plot.png", "USDA_plot.png", "Overall-all-Q3.png")
 
-# 定义图片标题列表
-plot_titles <- c("Fig6", "Fig7", "Fig8", "Fig9","Fig10")
+# Define list of plot titles
+plot_titles <- c("Fig6", "Fig7", "Fig8", "Fig9", "Fig10")
 
-# 循环处理每个文件
+# Loop through each file
 for (i in seq_along(file_names)) {
-  # 读取文件
+  # Read the file
   data <- read.csv(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", file_names[i]), header = TRUE, stringsAsFactors = FALSE)
   
-  # 筛选近5年(2019-2023)的数据
+  # Filter data for the last 5 years (2019-2023)
   data_filtered <- data %>% filter(Start.year >= 2019 & Start.year <= 2023)
   
-  # 将University列转换为因子变量,并指定顺序
+  # Convert University column to a factor variable and specify the order
   data_filtered$University <- factor(data_filtered$University, levels = c("Boise State University", "Idaho State University", "Montana State University", "University of Montana", "Washington State University"))
   
-  # 创建柱状图
+  # Create a bar plot
   plot <- ggplot(data_filtered, aes(x = University, y = Difference.Value, fill = factor(Start.year))) +
     geom_bar(stat = "identity", position = "dodge") +
     labs(title = paste0(plot_titles[i], ": Difference in Mean Award Amount (", gsub("-all-Q3.csv", "", file_names[i]), ")"),
@@ -503,7 +503,8 @@ for (i in seq_along(file_names)) {
     scale_fill_discrete(name = "Start Year")
   
   print(plot)
-  # 保存图像
+  # Save the image
   ggsave(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", output_names[i]), plot, width = 10, height = 6, dpi = 300)
 }
+
 ```
