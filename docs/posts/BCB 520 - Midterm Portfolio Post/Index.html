@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.543">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yaotian Gao">
+<meta name="dcterms.date" content="2024-03-20">
+<meta name="description" content="This post analyzes the University of Idaho’s research funding portfolio, including active awards, proportional representation of new awards, and performance compared to peer institutions. The analysis uses data visualization and justified metrics to provide insights for university leadership.">
+
+<title>BCB-Quarto Blog - BCB 520 - Midterm Portfolio Post</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BCB-Quarto Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">BCB 520 - Midterm Portfolio Post</h1>
+            <p class="subtitle lead">Analysis of University of Idaho’s Research Funding Performance</p>
+                  <div>
+        <div class="description">
+          This post analyzes the University of Idaho’s research funding portfolio, including active awards, proportional representation of new awards, and performance compared to peer institutions. The analysis uses data visualization and justified metrics to provide insights for university leadership.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">research funding</div>
+                <div class="quarto-category">data visualization</div>
+                <div class="quarto-category">university comparison</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yaotian Gao </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 20, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="preamble" class="level1">
+<h1>1. Preamble</h1>
+<p>The University of Idaho (UI) relies on research funding from various sponsors to support its academic mission and drive innovation. Understanding the current state and future outlook of the university’s research funding portfolio is crucial for informed decision-making by university leadership. This post aims to address three key questions:</p>
+<ol type="1">
+<li>What is the current state of UI’s active research awards, including their duration, amount, and principal investigators?</li>
+<li>How has the proportional representation of new awards from different funding sources changed over the past 5 to 10 years, and are there any notable trends?</li>
+<li>How does UI’s performance in securing research funding compare to that of peer institutions?</li>
+</ol>
+<p>By analyzing data related to these questions, this post will provide valuable insights into UI’s research funding landscape. The findings will help university leadership understand the institution’s strengths, identify areas for improvement, and make data-driven decisions to support the university’s research goals. Furthermore, this analysis will contribute to the university’s strategic planning efforts and help ensure the sustainability and growth of its research enterprise.</p>
+</section>
+<section id="data-and-code" class="level1">
+<h1>2. Data and Code</h1>
+<p>Data Sources Summary: This analysis utilizes data from four major U.S. research funding agencies: the Department of Agriculture (NIFA), Department of Energy, National Institutes of Health (NIH), and National Science Foundation (NSF). The data was obtained from the following sources:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Data Source</th>
+<th>Description</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NIFA Award Database</td>
+<td>Public database of awards granted by the NIFA</td>
+<td><a href="https://portal.nifa.usda.gov/lmd4/recent_awards" class="uri">https://portal.nifa.usda.gov/lmd4/recent_awards</a></td>
+</tr>
+<tr class="even">
+<td>Department of Energy PAMS</td>
+<td>External award search interface for the Department of Energy’s PAMS</td>
+<td><a href="https://pamspublic.science.energy.gov/WebPAMSExternal/interface/awards/AwardSearchExternal.aspx" class="uri">https://pamspublic.science.energy.gov/WebPAMSExternal/interface/awards/AwardSearchExternal.aspx</a></td>
+</tr>
+<tr class="odd">
+<td>NIH RePORTER API</td>
+<td>API providing access to NIH research grant data</td>
+<td><a href="https://api.reporter.nih.gov/documents/Data%20Elements%20for%20RePORTER%20Project%20API_V2.pdf" class="uri">https://api.reporter.nih.gov/documents/Data%20Elements%20for%20RePORTER%20Project%20API_V2.pdf</a></td>
+</tr>
+<tr class="even">
+<td>NSF Awards API</td>
+<td>API offering access to NSF award data</td>
+<td><a href="https://resources.research.gov/common/webapi/awardapisearch-v1.html" class="uri">https://resources.research.gov/common/webapi/awardapisearch-v1.html</a></td>
+</tr>
+</tbody>
+</table>
+<p>This data dictionary table provides an overview of each data source used in the analysis, including a brief description and the URL where the data can be accessed. The combination of these four data sources allows for a comprehensive analysis of research funding from major U.S. agencies to the University of Idaho and its peer institutions.</p>
+<p>The raw data and code used in this analysis are provided in the supplementary materials.</p>
+</section>
+<section id="results" class="level1">
+<h1>3. Results</h1>
+<section id="visualizing-the-university-of-idahos-active-research-awards-by-sponsor" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-university-of-idahos-active-research-awards-by-sponsor">3.1 Visualizing the University of Idaho’s Active Research Awards by Sponsor</h2>
+<p>To address Question 1, we investigated the funding situation of three major sponsors (DOE, NIH, and NSF) for the University of Idaho, focusing on projects with end dates in 2024 and beyond. Due to the lack of end date information provided by USDA, this analysis does not include data from USDA.</p>
+<p>We utilized two types of bar charts to present the findings. Figure 1 is a simple bar chart that arranges sponsors in order of increasing number of projects expiring in 2024. Projects expiring in 2024 are highlighted using a red channel to emphasize the expiration timeline for each sponsor. Figures 2-4 use stacked bar charts, with principal investigators (PIs) on the x-axis and the total amount of funding for projects ending in 2024 and beyond on the y-axis. Similarly, projects expiring in 2024 are represented using a red channel. The PIs are ordered by decreasing total funding amount, allowing for quick identification of the researchers with the most funding.</p>
+<p>Examining each sponsor individually, it is evident that for both NIH and NSF, the top five PIs in terms of total funding received have significantly higher amounts compared to other researchers, displaying a clear “head” trend in funding distribution (Fig2, 4, Table S1).</p>
+<p><img src="images/Fig1.png" class="img-fluid"></p>
+<p><img src="images/Fig2.png" class="img-fluid"></p>
+<p><img src="images/Fig3.png" class="img-fluid"></p>
+<p><img src="images/Fig4.png" class="img-fluid"></p>
+</section>
+<section id="analyzing-trends-in-proportional-representation-of-new-awards-by-funding-source" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-trends-in-proportional-representation-of-new-awards-by-funding-source">3.2 Analyzing Trends in Proportional Representation of New Awards by Funding Source</h2>
+<p>To investigate the trends in new awards from different institutions to the University of Idaho (UI) over the past 10 years, I chose to use a line chart. The line chart effectively reflects trends and allows for a clear comparison of trend changes between institutions. The x-axis represents the starting year of the project as the grant time for new projects, while the y-axis shows the number of new projects awarded by different institutions. The institutions are distinguished using two channels: color and different line styles, which helps readers quickly differentiate between institution types(Fig 5.).</p>
+<p>The chart reveals that from 2015 to 2021, the number of new projects from USDA showed an initial decline (2015-2018) followed by an increase (2018-2021), maintaining an overall upward trend. However, after 2021, the number of new projects rapidly decreased (2021-2023). For NSF projects, the overall trend remained stable, with the number of projects per year consistently between 10 and 20 over the past decade. Regarding NIH projects, there was a sharp increase in 2015, reaching 35 projects, followed by a steady decline. Although there was a rebound to nearly 20 projects in 2018, it eventually plummeted again. Despite a slight recovery in the past 3 years, the number of projects remains between 0 and 5, similar to the level 10 years ago.</p>
+<p>DOE only had projects in 2020 and 2021, with no new projects granted subsequently.</p>
+<p>In summary, USDA and NIH have experienced overall declining trends in new projects, with USDA showing more fluctuations and NIH demonstrating a more consistent decrease. NSF, on the other hand, has maintained a relatively stable number of new projects over the past decade. These trends suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding, while leveraging the stability of NSF support. Further investigation into the potential causes behind these trends, such as changes in funding priorities or shifts in UI’s research focus, could provide valuable insights for informed decision-making and strategic planning.</p>
+<p><img src="images/Number of New Awards.png" class="img-fluid"></p>
+</section>
+<section id="comparative-analysis-of-university-of-idahos-performance-with-peer-institutions" class="level2">
+<h2 class="anchored" data-anchor-id="comparative-analysis-of-university-of-idahos-performance-with-peer-institutions">3.3 Comparative Analysis of University of Idaho’s Performance with Peer Institutions</h2>
+<section id="data-preparation-and-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation-and-metrics">3.3.1 Data Preparation and Metrics</h3>
+<p>To assess the performance of each university, I selected data from the past five years (2019-2023) and processed the data as follows:</p>
+<p>Calculated the average annual funding per project (Mean Award Amount) for each university from different sponsors. This was done by dividing the total funding from each sponsor in a given year by the number of projects. This approach considers both the total funding and the number of projects, eliminating differences due to university size. Subtracted the University of Idaho’s average project funding from each university’s average project funding to determine the relative funding difference. A positive value indicates that the other university received more funding than the University of Idaho, while a negative value indicates less funding. Added the relative funding differences from all four sponsors to obtain the overall funding difference between each university and the University of Idaho for each year (Fig 10). Used a bar chart to visually compare the differences between universities and the University of Idaho across different years, with colors distinguishing the years.</p>
+</section>
+<section id="analysis-for-each-sponser" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-for-each-sponser">3.3.2 Analysis for each sponser</h3>
+<p>Overall (Fig 10), the University of Idaho(UI) performs better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University.</p>
+<section id="doe-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="doe-analysis">3.3.2.1 DOE Analysis</h4>
+<p>The University of Idaho performs similarly to Idaho State University and the University of Montana, worse than Washington State University, and significantly behind Montana State University. Notably, Boise State University received a large grant in 2023, leading to its superior performance compared to UI (Fig 6).</p>
+<p>Considering these results along with the findings from Q2 regarding the number of projects, UI’s competitiveness in DOE projects appears to be relatively weak.</p>
+</section>
+<section id="nih-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="nih-analysis">3.3.2.2 NIH Analysis</h4>
+<p>UI performs better than Idaho State University but lags behind the other universities in all years except 2022. Combined with the declining trend in the number of NIH projects from Q2, it can be concluded that UI is less competitive than the other universities in securing NIH funding (Fig 7).</p>
+</section>
+<section id="nsf-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="nsf-analysis">3.3.2.4 NSF Analysis</h4>
+<p>In NSF projects, UI consistently outperforms the other universities and maintains its lead. Considering the stable trend in the number of new NSF projects from Q2, UI appears to have a strong and consistent competitive edge in NSF projects (Fig 8).</p>
+</section>
+<section id="usda-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="usda-analysis">3.3.2.5 USDA Analysis</h4>
+<p>For USDA projects, UI consistently outperforms Idaho State University, slightly surpasses Boise State University, marginally lags behind the University of Montana, and significantly trails Washington State University and Montana State University (Fig 9).</p>
+<p>Overall, UI has some competitiveness in USDA projects but falls behind Montana State University and Washington State University.</p>
+<p><img src="images/DOE_plot.png" class="img-fluid"></p>
+<p><img src="images/NIH_plot-01.png" class="img-fluid"></p>
+<p><img src="images/NSF_plot.png" class="img-fluid"></p>
+<p><img src="images/USDA_plot.png" class="img-fluid"></p>
+<p><img src="images/Overall-all-Q3.png" class="img-fluid"></p>
+</section>
+</section>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>This analysis aimed to provide a comprehensive understanding of the University of Idaho’s (UI) research funding portfolio by addressing three key questions: (1) the current state of active research awards, (2) trends in the proportional representation of new awards from various funding sources, and (3) UI’s performance compared to peer institutions.</p>
+<p>The investigation of active research awards revealed that for NIH and NSF, the top five principal investigators (PIs) receive significantly higher funding amounts compared to other researchers, indicating a “head” trend in funding distribution. The analysis of new award trends over the past decade showed that USDA and NIH experienced overall declining trends, with USDA exhibiting more fluctuations and NIH demonstrating a more consistent decrease. In contrast, NSF maintained a relatively stable number of new projects. These findings suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding while leveraging the stability of NSF support.</p>
+<p>The comparative analysis of UI’s performance against peer institutions employed a metric based on the average annual funding per project, which considered both total funding and the number of projects. Overall, UI performed better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University. UI’s competitiveness varied across sponsors, with a relatively weak position in DOE projects, less competitiveness in NIH funding compared to most peers, a strong and consistent competitive edge in NSF projects, and some competitiveness in USDA projects, although falling behind Montana State University and Washington State University.</p>
+<p>These findings provide valuable insights into UI’s research funding landscape, highlighting strengths, areas for improvement, and potential strategies for ensuring the sustainability and growth of its research enterprise. The analysis emphasizes the importance of diversifying funding sources, particularly in light of declining trends from certain sponsors, and focusing on maintaining and enhancing competitiveness in areas of strength, such as NSF projects. Furthermore, the comparative analysis with peer institutions offers a benchmark for evaluating UI’s performance and identifies potential areas for learning and collaboration.</p>
+</section>
+<section id="supplementary-information" class="level1">
+<h1>Supplementary Information</h1>
+<section id="tabel-s1-active-research-awards-by-sponsor-principal-investigator-and-end-date" class="level2">
+<h2 class="anchored" data-anchor-id="tabel-s1-active-research-awards-by-sponsor-principal-investigator-and-end-date">Tabel S1: Active Research Awards by Sponsor, Principal Investigator, and End Date</h2>
+<table class="table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instrction</th>
+<th>Start year</th>
+<th>End year</th>
+<th>Award amount</th>
+<th>PI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DOE</td>
+<td>2020</td>
+<td>2024</td>
+<td>603903</td>
+<td>Yager, Elowyn</td>
+</tr>
+<tr class="even">
+<td>DOE</td>
+<td>2021</td>
+<td>2024</td>
+<td>1404162</td>
+<td>Marx, Christopher</td>
+</tr>
+<tr class="odd">
+<td>DOE</td>
+<td>2021</td>
+<td>2024</td>
+<td>1519359</td>
+<td>Vasdekis, Andreas</td>
+</tr>
+<tr class="even">
+<td>DOE</td>
+<td>2021</td>
+<td>2024</td>
+<td>1812000</td>
+<td>Sammarruca, Francesca</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2019</td>
+<td>2024</td>
+<td>61038</td>
+<td>JOHNSON, JILL L</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2021</td>
+<td>2024</td>
+<td>181821</td>
+<td>GRIESHABER, SCOTT S</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2019</td>
+<td>2024</td>
+<td>285011</td>
+<td>JOHNSON, JILL L</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2019</td>
+<td>2024</td>
+<td>346779</td>
+<td>MARTIN, BRYN ANDREW</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2018</td>
+<td>2024</td>
+<td>362003</td>
+<td>FORTUNATO, ELIZABETH A</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2018</td>
+<td>2024</td>
+<td>428581</td>
+<td>MCGUIRE, MICHELLE KAY</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2018</td>
+<td>2024</td>
+<td>460341</td>
+<td>LUCKHART, SHIRLEY</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2023</td>
+<td>2025</td>
+<td>34078</td>
+<td>PATEL, JAGDISH SURESH</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2023</td>
+<td>2025</td>
+<td>64727</td>
+<td>VAN LEUVEN, JAMES</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>147472</td>
+<td>FU, AUDREY QIUYAN</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>152932</td>
+<td>VAN LEUVEN, JAMES</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>153149</td>
+<td>FU, AUDREY QIUYAN</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>156572</td>
+<td>PATEL, JAGDISH SURESH</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>163515</td>
+<td>REMIEN, CHRISTOPHER HASKELL</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>181902</td>
+<td>XIAN, MIN</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>199138</td>
+<td>XIAN, MIN</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>266181</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2020</td>
+<td>2025</td>
+<td>348389</td>
+<td>MITCHELL, DIANA</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2020</td>
+<td>2025</td>
+<td>357664</td>
+<td>MITCHELL, DIANA</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2020</td>
+<td>2025</td>
+<td>359164</td>
+<td>MITCHELL, DIANA</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2020</td>
+<td>2025</td>
+<td>359906</td>
+<td>MITCHELL, DIANA</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>492598</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>677022</td>
+<td>MILLER, CRAIG R</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>715546</td>
+<td>MILLER, CRAIG R</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>764637</td>
+<td>MILLER, CRAIG R</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>1025023</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>1040007</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>1138359</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>2172986</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>2194934</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>2206645</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2015</td>
+<td>2025</td>
+<td>2212500</td>
+<td>WICHMAN, HOLLY A</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2023</td>
+<td>2026</td>
+<td>171789</td>
+<td>HERNANDEZ VARGAS, ESTEBAN ABERLARDO</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2022</td>
+<td>2026</td>
+<td>544548</td>
+<td>LUCKHART, SHIRLEY</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2022</td>
+<td>2026</td>
+<td>556756</td>
+<td>LUCKHART, SHIRLEY</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2016</td>
+<td>2027</td>
+<td>367126</td>
+<td>NUISMER, SCOTT L</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2023</td>
+<td>2028</td>
+<td>98616</td>
+<td>WAYNANT, KRISTOPHER V</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2023</td>
+<td>2028</td>
+<td>263413</td>
+<td>ROBISON, BARRIE D</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>153322</td>
+<td>LANE, GINNY</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>162320</td>
+<td>CHEN, YIMIN</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>300000</td>
+<td>MCGUIRE, MICHELLE KAY</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>331232</td>
+<td>BROWN, ANN FROST</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>461621</td>
+<td>WILLIAMS, JANET E.</td>
+</tr>
+<tr class="even">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>946131</td>
+<td>MCGUIRE, MICHELLE KAY</td>
+</tr>
+<tr class="odd">
+<td>NIH</td>
+<td>2024</td>
+<td>2029</td>
+<td>2354626</td>
+<td>MCGUIRE, MICHELLE KAY</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2021</td>
+<td>2024</td>
+<td>78630</td>
+<td>Erika Rader</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2024</td>
+<td>99445</td>
+<td>Indrajit Charit</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2019</td>
+<td>2024</td>
+<td>108245</td>
+<td>Leslie L Baker</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2020</td>
+<td>2024</td>
+<td>117607</td>
+<td>Grant Harley</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2024</td>
+<td>118517</td>
+<td>Zachariah B Etienne</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2024</td>
+<td>128702</td>
+<td>Grant Harley</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2024</td>
+<td>226347</td>
+<td>Zachariah B Etienne</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2024</td>
+<td>227519</td>
+<td>Karla Eitel</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2021</td>
+<td>2024</td>
+<td>335902</td>
+<td>Zachariah B Etienne</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2022</td>
+<td>2024</td>
+<td>344599</td>
+<td>Jessica R Stanley</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2019</td>
+<td>2024</td>
+<td>348957</td>
+<td>Elowyn Yager</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2019</td>
+<td>2024</td>
+<td>500000</td>
+<td>Andrew S Nelson</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2021</td>
+<td>2024</td>
+<td>539714</td>
+<td>William J Reeder</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2016</td>
+<td>2024</td>
+<td>558035</td>
+<td>Daniele Tonina</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2020</td>
+<td>2024</td>
+<td>586223</td>
+<td>Adam G Jones</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2014</td>
+<td>2024</td>
+<td>597487</td>
+<td>Jerry R McMurtry</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2019</td>
+<td>2024</td>
+<td>651698</td>
+<td>Michael S Strickland</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2020</td>
+<td>2024</td>
+<td>671486</td>
+<td>Timothy C Bartholomaus</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2019</td>
+<td>2024</td>
+<td>729932</td>
+<td>Elizabeth J Cassel</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2018</td>
+<td>2024</td>
+<td>1777713</td>
+<td>Christopher J Marx</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2020</td>
+<td>2024</td>
+<td>5830709</td>
+<td>Xiaogang Ma</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2018</td>
+<td>2024</td>
+<td>20000000</td>
+<td>Andrew D Kliskey</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2025</td>
+<td>45380</td>
+<td>Alexander Woo</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2022</td>
+<td>2025</td>
+<td>140899</td>
+<td>Eva M Top</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2025</td>
+<td>199946</td>
+<td>Johnny Li</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2025</td>
+<td>208292</td>
+<td>Elowyn Yager</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2025</td>
+<td>250000</td>
+<td>Esteban A Hernandez Vargas</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2025</td>
+<td>336514</td>
+<td>Andreas E Vasdekis</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2025</td>
+<td>402341</td>
+<td>Nathan R Schiele</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2025</td>
+<td>443170</td>
+<td>Leda N Kobziar</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2019</td>
+<td>2025</td>
+<td>449355</td>
+<td>Lilian Alessa</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2018</td>
+<td>2025</td>
+<td>599643</td>
+<td>Eric L Mittelstaedt</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2021</td>
+<td>2025</td>
+<td>677575</td>
+<td>Laurel Lynch</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2019</td>
+<td>2025</td>
+<td>749639</td>
+<td>Andrew D Kliskey</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2021</td>
+<td>2025</td>
+<td>792475</td>
+<td>Xiaogang Ma</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2024</td>
+<td>2025</td>
+<td>1000000</td>
+<td>Tara Hudiburg</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2020</td>
+<td>2025</td>
+<td>1028242</td>
+<td>Adam G Jones</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2018</td>
+<td>2025</td>
+<td>1093880</td>
+<td>Christine E Parent</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2020</td>
+<td>2025</td>
+<td>1368804</td>
+<td>Julie M Amador</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2025</td>
+<td>3974309</td>
+<td>Michael Maughan</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>156022</td>
+<td>Grant Harley</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>359828</td>
+<td>Amin Mirkouei</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>443525</td>
+<td>Andrew Tranmer</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2026</td>
+<td>499866</td>
+<td>Christine E Parent</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>509641</td>
+<td>Eric L Mittelstaedt</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2024</td>
+<td>2026</td>
+<td>628415</td>
+<td>Dave Lien</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>645273</td>
+<td>Kristopher V Waynant</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2026</td>
+<td>664468</td>
+<td>Scott L Nuismer</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2026</td>
+<td>2999999</td>
+<td>Vanessa Anthony-Stevens</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2021</td>
+<td>2026</td>
+<td>18950955</td>
+<td>Michael S Strickland</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2027</td>
+<td>276000</td>
+<td>Jerry R McMurtry</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2024</td>
+<td>2027</td>
+<td>456051</td>
+<td>Kristopher V Waynant</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2027</td>
+<td>898220</td>
+<td>Paul A Rowley</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2022</td>
+<td>2027</td>
+<td>1016312</td>
+<td>Chris A Hamilton</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2027</td>
+<td>1179977</td>
+<td>Julie M Amador</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2027</td>
+<td>2435509</td>
+<td>Lilian Alessa</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2022</td>
+<td>2027</td>
+<td>4460195</td>
+<td>Jim Alves-Foss</td>
+</tr>
+<tr class="odd">
+<td>NSF</td>
+<td>2023</td>
+<td>2028</td>
+<td>250000</td>
+<td>Shirley Luckhart</td>
+</tr>
+<tr class="even">
+<td>NSF</td>
+<td>2023</td>
+<td>2028</td>
+<td>20000000</td>
+<td>Andrew D Kliskey</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code-fold" class="level2">
+<h2 class="anchored" data-anchor-id="code-fold">Code fold</h2>
+<section id="q1" class="level3">
+<h3 class="anchored" data-anchor-id="q1">Q1</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#比例图</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建数据框</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sponsor =</span> <span class="fu">c</span>(<span class="st">"DOE"</span>, <span class="st">"NSF"</span>, <span class="st">"NIH"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Expiring_2024 =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">22</span>, <span class="dv">7</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Active_After_2024 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">37</span>, <span class="dv">38</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 将数据框转换为长格式</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>data_long <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(data, <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"Expiring_2024"</span>, <span class="st">"Active_After_2024"</span>), </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">names_to =</span> <span class="st">"Status"</span>, <span class="at">values_to =</span> <span class="st">"Count"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制分组柱状图</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_long, <span class="fu">aes</span>(<span class="at">x =</span> Sponsor, <span class="at">y =</span> Count, <span class="at">fill =</span> Status)) <span class="sc">+</span> </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> Count), <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>), </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Expiring_2024"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"Active_After_2024"</span> <span class="ot">=</span> <span class="st">"blue"</span>),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Active After 2024"</span>, <span class="st">"Expiring in 2024"</span>)) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Fig1. Project Status by Sponsor"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Sponsor"</span>, <span class="at">y =</span> <span class="st">"Number of Projects"</span>) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NSF</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取数据</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"NSF-UI.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 筛选2024年及以后的项目</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(End.year <span class="sc">&gt;=</span> <span class="dv">2024</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(End.year, Award.amount, PI)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 将2024年之后的年份替换为"After 2024"</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>End.year <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data_filtered<span class="sc">$</span>End.year <span class="sc">&gt;</span> <span class="dv">2024</span>, <span class="st">"After 2024"</span>, <span class="fu">as.character</span>(data_filtered<span class="sc">$</span>End.year))</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 按Award.amount降序排列</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data_filtered <span class="sc">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Award.amount))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 将PI转换为因子变量,并按Award.amount的顺序排列水平</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>PI <span class="ot">&lt;-</span> <span class="fu">factor</span>(data_filtered<span class="sc">$</span>PI, <span class="at">levels =</span> <span class="fu">unique</span>(data_filtered<span class="sc">$</span>PI))</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制柱形图</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> PI, <span class="at">y =</span> Award.amount, <span class="at">fill =</span> <span class="fu">factor</span>(End.year))) <span class="sc">+</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2024"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"After 2024"</span><span class="ot">=</span><span class="st">"blue"</span>), <span class="at">name =</span> <span class="st">"End Year"</span>) <span class="sc">+</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Fig2.NSF Awards to University of Idaho (2024 and Beyond)"</span>,</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Principal Investigator"</span>, <span class="at">y =</span> <span class="st">"Award Amount"</span>) <span class="sc">+</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#DOE</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取数据</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"DOE-UI.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 筛选2024年及以后的项目</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(End.year <span class="sc">&gt;=</span> <span class="dv">2024</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(End.year, Award.amount, PI)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 将2024年之后的年份替换为"After 2024"</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>End.year <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data_filtered<span class="sc">$</span>End.year <span class="sc">&gt;</span> <span class="dv">2024</span>, <span class="st">"After 2024"</span>, <span class="fu">as.character</span>(data_filtered<span class="sc">$</span>End.year))</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 按Award.amount降序排列</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data_filtered <span class="sc">%&gt;%</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Award.amount))</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 将PI转换为因子变量,并按Award.amount的顺序排列水平</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>PI <span class="ot">&lt;-</span> <span class="fu">factor</span>(data_filtered<span class="sc">$</span>PI, <span class="at">levels =</span> <span class="fu">unique</span>(data_filtered<span class="sc">$</span>PI))</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制柱形图</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> PI, <span class="at">y =</span> Award.amount, <span class="at">fill =</span> <span class="fu">factor</span>(End.year))) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2024"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"After 2024"</span><span class="ot">=</span><span class="st">"blue"</span>), <span class="at">name =</span> <span class="st">"End Year"</span>) <span class="sc">+</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Fig3. DOE Awards to University of Idaho (2024 and Beyond)"</span>,</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Principal Investigator"</span>, <span class="at">y =</span> <span class="st">"Award Amount"</span>) <span class="sc">+</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NIH</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取数据</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"NIH-UI.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 筛选2024年及以后的项目</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(End.year <span class="sc">&gt;=</span> <span class="dv">2024</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(End.year, Award.amount, PI)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 将2024年之后的年份替换为"After 2024"</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>End.year <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data_filtered<span class="sc">$</span>End.year <span class="sc">&gt;</span> <span class="dv">2024</span>, <span class="st">"After 2024"</span>, <span class="fu">as.character</span>(data_filtered<span class="sc">$</span>End.year))</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 按Award.amount降序排列</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> data_filtered <span class="sc">%&gt;%</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Award.amount))</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 将PI转换为因子变量,并按Award.amount的顺序排列水平</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>data_filtered<span class="sc">$</span>PI <span class="ot">&lt;-</span> <span class="fu">factor</span>(data_filtered<span class="sc">$</span>PI, <span class="at">levels =</span> <span class="fu">unique</span>(data_filtered<span class="sc">$</span>PI))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制柱形图</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> PI, <span class="at">y =</span> Award.amount, <span class="at">fill =</span> <span class="fu">factor</span>(End.year))) <span class="sc">+</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2024"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"After 2024"</span><span class="ot">=</span><span class="st">"blue"</span>), <span class="at">name =</span> <span class="st">"End Year"</span>) <span class="sc">+</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Fig4. NIH Awards to University of Idaho (2024 and Beyond)"</span>,</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Principal Investigator"</span>, <span class="at">y =</span> <span class="st">"Award Amount"</span>) <span class="sc">+</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-1-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q2" class="level3">
+<h3 class="anchored" data-anchor-id="q2">Q2</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Sponsers<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"DOE"</span>,<span class="st">"NIH"</span>,<span class="st">"NSF"</span>,<span class="st">"USDA"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (Sponser <span class="cf">in</span> Sponsers){</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取CSV文件</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(Sponser,<span class="st">"-all.csv"</span>), <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 按照Start year分组，计算每年的Award amount总和和项目数量</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(<span class="fu">cbind</span>(Award.amount, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">~</span> University <span class="sc">+</span> Start.year, <span class="at">data =</span> data, <span class="at">FUN =</span> sum)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 重命名列</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(result) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"University"</span>, <span class="st">"Start.year"</span>, <span class="st">"Award.amount"</span>, <span class="st">"n"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 按照University和Start.year排序</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> result[<span class="fu">order</span>(result<span class="sc">$</span>University, result<span class="sc">$</span>Start.year), ]</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 输出结果</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(result, <span class="at">file =</span> <span class="fu">paste0</span>(<span class="st">"E:/01-文件/04-UI文件/2401-【课程】BCB/BCB-Mid/00-Temp/Q2/"</span>,Sponser,<span class="st">"-all-Q2.csv"</span>), <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    University Start.year Award.amount n
+5       Boise State University       2021       750000 1
+10      Boise State University       2022      2058798 2
+15      Boise State University       2023     13988242 3
+11      Idaho State University       2022       583930 1
+16      Idaho State University       2023      1195000 1
+1     Montana State University       2020      6583357 2
+6     Montana State University       2021      5361000 1
+12    Montana State University       2022      3112238 1
+17    Montana State University       2023       998671 1
+2          University of Idaho       2020       603903 1
+7          University of Idaho       2021      4735521 3
+3        University of Montana       2020       749849 1
+8        University of Montana       2021       326520 1
+13       University of Montana       2022       749953 1
+4  Washington State University       2020      1047982 1
+9  Washington State University       2021      4365974 3
+14 Washington State University       2022      5089869 3
+18 Washington State University       2023      4665901 2
+                    University Start.year Award.amount   n
+1       Boise State University       2013      1352085   4
+6       Boise State University       2014     33559880  43
+14      Boise State University       2016       798444   2
+19      Boise State University       2017      2986948  11
+24      Boise State University       2018      1627452   8
+29      Boise State University       2019      4653756  12
+34      Boise State University       2020      3709206  13
+40      Boise State University       2021      1519742   6
+45      Boise State University       2022      2016910  10
+51      Boise State University       2023      4674682  10
+2       Idaho State University       2013      1598896   5
+7       Idaho State University       2014      1214920   6
+15      Idaho State University       2016      1176525   4
+35      Idaho State University       2020      1636777   4
+46      Idaho State University       2022      1538086   4
+3     Montana State University       2013      3117921  15
+8     Montana State University       2014     43419578  70
+11    Montana State University       2015      7821832  26
+16    Montana State University       2016     31745434  47
+20    Montana State University       2017      7854683  20
+25    Montana State University       2018      9492666  28
+30    Montana State University       2019     10122580  29
+36    Montana State University       2020     16836376  44
+41    Montana State University       2021      8651615  30
+47    Montana State University       2022      2081971  11
+52    Montana State University       2023      3020053  10
+56    Montana State University       2024        35199   1
+4          University of Idaho       2013      4968034   5
+9          University of Idaho       2014      1285153   5
+12         University of Idaho       2015     30279331  35
+17         University of Idaho       2016      2647581  10
+21         University of Idaho       2017       558322   4
+26         University of Idaho       2018      6309046  18
+31         University of Idaho       2019      1922585   8
+37         University of Idaho       2020      1523216   7
+42         University of Idaho       2021       399309   2
+48         University of Idaho       2022      1251304   3
+53         University of Idaho       2023       632623   5
+57         University of Idaho       2024      4709252   7
+5        University of Montana       2013     12335060  37
+10       University of Montana       2014     20692078  36
+13       University of Montana       2015      6270783  16
+18       University of Montana       2016     10949002  36
+22       University of Montana       2017      4938974  22
+27       University of Montana       2018     34222555  39
+32       University of Montana       2019     12495089  18
+38       University of Montana       2020     20579362  39
+43       University of Montana       2021     20795865  46
+49       University of Montana       2022      3892146  16
+54       University of Montana       2023      4142750   6
+58       University of Montana       2024       586559   1
+23 Washington State University       2017      7968605  10
+28 Washington State University       2018     33350736 110
+33 Washington State University       2019     30498813  75
+39 Washington State University       2020     45033864 102
+44 Washington State University       2021     64872103 109
+50 Washington State University       2022     17465826  61
+55 Washington State University       2023      8460119  29
+59 Washington State University       2024      1302920   4
+                    University Start.year Award.amount  n
+1       Boise State University       2013      6028123 12
+7       Boise State University       2014      8759114 23
+13      Boise State University       2015      3285442 16
+19      Boise State University       2016     14137747 26
+25      Boise State University       2017      9453700 25
+31      Boise State University       2018     15624749 20
+37      Boise State University       2019     11148414 25
+43      Boise State University       2020      7438223 24
+49      Boise State University       2021      8195325 21
+55      Boise State University       2022     14789937 26
+61      Boise State University       2023     15854646 23
+67      Boise State University       2024     13851236 11
+2       Idaho State University       2013      4951260  8
+8       Idaho State University       2014       314313  2
+14      Idaho State University       2015      5987109  6
+20      Idaho State University       2016      1394103  5
+26      Idaho State University       2017       756060  2
+32      Idaho State University       2018      1301966  5
+38      Idaho State University       2019       452091  2
+44      Idaho State University       2020      2037449  6
+50      Idaho State University       2021      2040948  5
+56      Idaho State University       2022      4076831  9
+62      Idaho State University       2023      5145039  5
+68      Idaho State University       2024       590780  1
+3     Montana State University       2013     11025521 23
+9     Montana State University       2014      6587016 14
+15    Montana State University       2015      9828341 30
+21    Montana State University       2016     14413607 26
+27    Montana State University       2017     11205874 29
+33    Montana State University       2018     10990548 26
+39    Montana State University       2019      9382008 26
+45    Montana State University       2020     19334060 37
+51    Montana State University       2021     35974630 33
+57    Montana State University       2022     10894439 21
+63    Montana State University       2023     35370261 32
+69    Montana State University       2024      8880596  7
+4          University of Idaho       2013     30105225 21
+10         University of Idaho       2014      3631623 11
+16         University of Idaho       2015      7755748 19
+22         University of Idaho       2016     15192789 15
+28         University of Idaho       2017     10121112 15
+34         University of Idaho       2018     27161869 17
+40         University of Idaho       2019      5199388 11
+46         University of Idaho       2020     11017835 16
+52         University of Idaho       2021     28825063 14
+58         University of Idaho       2022     11255010 13
+64         University of Idaho       2023     27247360 14
+70         University of Idaho       2024      2084466  3
+5        University of Montana       2013      3820282 14
+11       University of Montana       2014     14435858 20
+17       University of Montana       2015      5310429 20
+23       University of Montana       2016     13109798 22
+29       University of Montana       2017     11196274 19
+35       University of Montana       2018     27096664 24
+41       University of Montana       2019      7090829 15
+47       University of Montana       2020      8824481 21
+53       University of Montana       2021      7699099 14
+59       University of Montana       2022     20214866 12
+65       University of Montana       2023      6058485 12
+71       University of Montana       2024      1975000  2
+6  Washington State University       2013     17507105 47
+12 Washington State University       2014     13556982 37
+18 Washington State University       2015     15415746 46
+24 Washington State University       2016     21032346 52
+30 Washington State University       2017     15145069 38
+36 Washington State University       2018     18469524 40
+42 Washington State University       2019     15185567 44
+48 Washington State University       2020     22544034 48
+54 Washington State University       2021     17962918 30
+60 Washington State University       2022     13242705 37
+66 Washington State University       2023     22568607 38
+72 Washington State University       2024      1893724  5
+                    University Start.year Award.amount  n
+1      Boise State University        2013       499815  1
+6      Boise State University        2014        47041  1
+24     Boise State University        2018       585490  4
+30     Boise State University        2019       392787  2
+35     Boise State University        2020       978435  2
+40     Boise State University        2021      1028528  3
+45     Boise State University        2022       650000  1
+50     Boise State University        2023      1239965  3
+7       Idaho State University       2014       150000  1
+25      Idaho State University       2018       149993  1
+2     Montana State University       2013      7947216 18
+8     Montana State University       2014      7798503 19
+12    Montana State University       2015      8601249 30
+16    Montana State University       2016      7612354 25
+20    Montana State University       2017      8383096 21
+26    Montana State University       2018     22890294 24
+31    Montana State University       2019     16929989 19
+36    Montana State University       2020     26227372 38
+41    Montana State University       2021     22883712 30
+46    Montana State University       2022     19204928 18
+51    Montana State University       2023     18381892 23
+54    Montana State University       2024      2756212  8
+3          University of Idaho       2013      9576751 22
+9          University of Idaho       2014     12672810 18
+13         University of Idaho       2015     13931371 33
+17         University of Idaho       2016     10227970 29
+21         University of Idaho       2017     14122833 23
+27         University of Idaho       2018      9840442 22
+32         University of Idaho       2019     12906989 27
+37         University of Idaho       2020     36267561 42
+42         University of Idaho       2021     19797718 52
+47         University of Idaho       2022     14908491 31
+52         University of Idaho       2023     15491620 28
+55         University of Idaho       2024      3148622  9
+4        University of Montana       2013       679049  2
+10       University of Montana       2014       683809  1
+14       University of Montana       2015       672679  2
+18       University of Montana       2016      2632372  5
+22       University of Montana       2017      1141476  2
+28       University of Montana       2018       873052  3
+33       University of Montana       2019       698462  1
+38       University of Montana       2020      1768720  3
+43       University of Montana       2021      1215773  2
+48       University of Montana       2022      1242201  2
+56       University of Montana       2024       236891  1
+5  Washington State University       2013     25676698 30
+11 Washington State University       2014     29917427 29
+15 Washington State University       2015     32619166 48
+19 Washington State University       2016     23254512 40
+23 Washington State University       2017     19578972 31
+29 Washington State University       2018     32209976 40
+34 Washington State University       2019     28725933 43
+39 Washington State University       2020     39352704 51
+44 Washington State University       2021     49210138 44
+49 Washington State University       2022     37735267 39
+53 Washington State University       2023     33187208 37
+57 Washington State University       2024      4609215  9</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 读取CSV文件</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"E:</span><span class="sc">\\</span><span class="st">01-文件</span><span class="sc">\\</span><span class="st">04-UI文件</span><span class="sc">\\</span><span class="st">2401-【课程】BCB</span><span class="sc">\\</span><span class="st">BCB-Mid</span><span class="sc">\\</span><span class="st">00-Temp</span><span class="sc">\\</span><span class="st">Q2</span><span class="sc">\\</span><span class="st">UI统计表.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 加载ggplot2包</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 筛选2013年至2023年的数据</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, Start.year <span class="sc">&gt;=</span> <span class="dv">2013</span> <span class="sc">&amp;</span> Start.year <span class="sc">&lt;=</span> <span class="dv">2023</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制折线图</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> Start.year, <span class="at">y =</span> n, <span class="at">color =</span> Sponser</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>, <span class="at">linetype =</span> Sponser</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>)) <span class="sc">+</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"USDA"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"NSF"</span> <span class="ot">=</span> <span class="st">"green"</span>, <span class="st">"NIH"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"DOE"</span> <span class="ot">=</span> <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"USDA"</span> <span class="ot">=</span> <span class="st">"solid"</span>, <span class="st">"NSF"</span> <span class="ot">=</span> <span class="st">"dashed"</span>, <span class="st">"NIH"</span> <span class="ot">=</span> <span class="st">"dotted"</span>, <span class="st">"DOE"</span> <span class="ot">=</span> <span class="st">"dotdash"</span>)) <span class="sc">+</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Number of New Awards"</span>, <span class="at">title =</span> <span class="st">"Fig5: New Awards from Different Sponsors"</span>) <span class="sc">+</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">2013</span>, <span class="dv">2023</span>, <span class="at">by =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q3" class="level3">
+<h3 class="anchored" data-anchor-id="q3">Q3</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义文件名列表</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>file_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DOE-all-Q2.csv"</span>, <span class="st">"NIH-all-Q2.csv"</span>, <span class="st">"NSF-all-Q2.csv"</span>, <span class="st">"USDA-all-Q2.csv"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义输出文件名列表</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>output_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DOE-all-Q3.csv"</span>, <span class="st">"NIH-all-Q3.csv"</span>, <span class="st">"NSF-all-Q3.csv"</span>, <span class="st">"USDA-all-Q3.csv"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 循环处理每个文件</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(file_names)) {</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 读取文件</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(<span class="st">"E:</span><span class="sc">\\</span><span class="st">01-文件</span><span class="sc">\\</span><span class="st">04-UI文件</span><span class="sc">\\</span><span class="st">2401-【课程】BCB</span><span class="sc">\\</span><span class="st">BCB-Mid</span><span class="sc">\\</span><span class="st">00-Temp</span><span class="sc">\\</span><span class="st">Q3</span><span class="sc">\\</span><span class="st">"</span>, file_names[i]), <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 创建一个新的数据框来存储结果</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">University =</span> <span class="fu">character</span>(), <span class="at">Start.year =</span> <span class="fu">numeric</span>(), <span class="at">Difference.Value =</span> <span class="fu">numeric</span>(), <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 获取University of Idaho的数据</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  ui_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>University <span class="sc">==</span> <span class="st">"University of Idaho"</span>, ]</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 计算每个学校的Difference.Value值</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">unique</span>(data<span class="sc">$</span>Start.year)) {</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    year_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>Start.year <span class="sc">==</span> j, ]</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    ui_mean <span class="ot">&lt;-</span> ui_data<span class="sc">$</span>Mean[ui_data<span class="sc">$</span>Start.year <span class="sc">==</span> j]</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">unique</span>(year_data<span class="sc">$</span>University)) {</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (k <span class="sc">!=</span> <span class="st">"University of Idaho"</span>) {</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>        university_mean <span class="ot">&lt;-</span> year_data<span class="sc">$</span>Mean[year_data<span class="sc">$</span>University <span class="sc">==</span> k]</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>        difference_value <span class="ot">&lt;-</span> university_mean <span class="sc">-</span> ui_mean</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>        result <span class="ot">&lt;-</span> <span class="fu">rbind</span>(result, <span class="fu">data.frame</span>(<span class="at">University =</span> k, <span class="at">Start.year =</span> j, <span class="at">Difference.Value =</span> difference_value))</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 将结果写入CSV文件</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.csv</span>(result, <span class="fu">paste0</span>(<span class="st">"E:</span><span class="sc">\\</span><span class="st">01-文件</span><span class="sc">\\</span><span class="st">04-UI文件</span><span class="sc">\\</span><span class="st">2401-【课程】BCB</span><span class="sc">\\</span><span class="st">BCB-Mid</span><span class="sc">\\</span><span class="st">00-Temp</span><span class="sc">\\</span><span class="st">Q3</span><span class="sc">\\</span><span class="st">"</span>, output_names[i]), <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 加载所需的包</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义文件名列表</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>file_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DOE-all-Q3.csv"</span>, <span class="st">"NIH-all-Q3.csv"</span>, <span class="st">"NSF-all-Q3.csv"</span>, <span class="st">"USDA-all-Q3.csv"</span>,<span class="st">"Overall-all-Q3.csv"</span>)</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义输出图像名列表</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>output_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DOE_plot.png"</span>, <span class="st">"NIH_plot.png"</span>, <span class="st">"NSF_plot.png"</span>, <span class="st">"USDA_plot.png"</span>,<span class="st">"Overall-all-Q3.png"</span>)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义图片标题列表</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>plot_titles <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Fig6"</span>, <span class="st">"Fig7"</span>, <span class="st">"Fig8"</span>, <span class="st">"Fig9"</span>,<span class="st">"Fig10"</span>)</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="co"># 循环处理每个文件</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(file_names)) {</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 读取文件</span></span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(<span class="st">"E:</span><span class="sc">\\</span><span class="st">01-文件</span><span class="sc">\\</span><span class="st">04-UI文件</span><span class="sc">\\</span><span class="st">2401-【课程】BCB</span><span class="sc">\\</span><span class="st">BCB-Mid</span><span class="sc">\\</span><span class="st">00-Temp</span><span class="sc">\\</span><span class="st">Q3</span><span class="sc">\\</span><span class="st">"</span>, file_names[i]), <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 筛选近5年(2019-2023)的数据</span></span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>  data_filtered <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Start.year <span class="sc">&gt;=</span> <span class="dv">2019</span> <span class="sc">&amp;</span> Start.year <span class="sc">&lt;=</span> <span class="dv">2023</span>)</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 将University列转换为因子变量,并指定顺序</span></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>  data_filtered<span class="sc">$</span>University <span class="ot">&lt;-</span> <span class="fu">factor</span>(data_filtered<span class="sc">$</span>University, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Boise State University"</span>, <span class="st">"Idaho State University"</span>, <span class="st">"Montana State University"</span>, <span class="st">"University of Montana"</span>, <span class="st">"Washington State University"</span>))</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 创建柱状图</span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>  plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> University, <span class="at">y =</span> Difference.Value, <span class="at">fill =</span> <span class="fu">factor</span>(Start.year))) <span class="sc">+</span></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(plot_titles[i], <span class="st">": Difference in Mean Award Amount ("</span>, <span class="fu">gsub</span>(<span class="st">"-all-Q3.csv"</span>, <span class="st">""</span>, file_names[i]), <span class="st">")"</span>),</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="st">"University"</span>,</span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"Difference Value"</span>,</span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> <span class="st">"Start Year"</span>) <span class="sc">+</span></span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>),</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>          <span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"Start Year"</span>)</span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(plot)</span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 保存图像</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="fu">paste0</span>(<span class="st">"E:</span><span class="sc">\\</span><span class="st">01-文件</span><span class="sc">\\</span><span class="st">04-UI文件</span><span class="sc">\\</span><span class="st">2401-【课程】BCB</span><span class="sc">\\</span><span class="st">BCB-Mid</span><span class="sc">\\</span><span class="st">00-Temp</span><span class="sc">\\</span><span class="st">Q3</span><span class="sc">\\</span><span class="st">"</span>, output_names[i]), plot, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Index_files/figure-html/unnamed-chunk-3-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

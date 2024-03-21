@@ -1,0 +1,509 @@
+---
+title: "BCB 520 - Midterm Portfolio Post" 
+subtitle: "Analysis of University of Idaho's Research Funding Performance" 
+author: "Yaotian Gao" 
+date: "2024-03-20" 
+categories: [research funding, data visualization, university comparison] 
+description: "This post analyzes the University of Idaho's research funding portfolio, including active awards, proportional representation of new awards, and performance compared to peer institutions. The analysis uses data visualization and justified metrics to provide insights for university leadership." 
+format: html 
+editor: visual
+image: "1.png"
+code-fold: true
+---
+
+# 1. Preamble
+
+The University of Idaho (UI) relies on research funding from various sponsors to support its academic mission and drive innovation. Understanding the current state and future outlook of the university's research funding portfolio is crucial for informed decision-making by university leadership. This post aims to address three key questions:
+
+1.  What is the current state of UI's active research awards, including their duration, amount, and principal investigators?
+2.  How has the proportional representation of new awards from different funding sources changed over the past 5 to 10 years, and are there any notable trends?
+3.  How does UI's performance in securing research funding compare to that of peer institutions?
+
+By analyzing data related to these questions, this post will provide valuable insights into UI's research funding landscape. The findings will help university leadership understand the institution's strengths, identify areas for improvement, and make data-driven decisions to support the university's research goals. Furthermore, this analysis will contribute to the university's strategic planning efforts and help ensure the sustainability and growth of its research enterprise.
+
+# 2. Data and Code
+
+Data Sources Summary: This analysis utilizes data from four major U.S. research funding agencies: the Department of Agriculture (NIFA), Department of Energy, National Institutes of Health (NIH), and National Science Foundation (NSF). The data was obtained from the following sources:
+
+| Data Source               | Description                                                         | URL                                                                                               |
+|-------------------|---------------------------|---------------------------|
+| NIFA Award Database       | Public database of awards granted by the NIFA                       | <https://portal.nifa.usda.gov/lmd4/recent_awards>                                                 |
+| Department of Energy PAMS | External award search interface for the Department of Energy's PAMS | <https://pamspublic.science.energy.gov/WebPAMSExternal/interface/awards/AwardSearchExternal.aspx> |
+| NIH RePORTER API          | API providing access to NIH research grant data                     | <https://api.reporter.nih.gov/documents/Data%20Elements%20for%20RePORTER%20Project%20API_V2.pdf>  |
+| NSF Awards API            | API offering access to NSF award data                               | <https://resources.research.gov/common/webapi/awardapisearch-v1.html>                             |
+
+This data dictionary table provides an overview of each data source used in the analysis, including a brief description and the URL where the data can be accessed. The combination of these four data sources allows for a comprehensive analysis of research funding from major U.S. agencies to the University of Idaho and its peer institutions.
+
+The raw data and code used in this analysis are provided in the supplementary materials.
+
+# 3. Results
+
+## 3.1 Visualizing the University of Idaho's Active Research Awards by Sponsor
+
+To address Question 1, we investigated the funding situation of three major sponsors (DOE, NIH, and NSF) for the University of Idaho, focusing on projects with end dates in 2024 and beyond. Due to the lack of end date information provided by USDA, this analysis does not include data from USDA.
+
+We utilized two types of bar charts to present the findings. Figure 1 is a simple bar chart that arranges sponsors in order of increasing number of projects expiring in 2024. Projects expiring in 2024 are highlighted using a red channel to emphasize the expiration timeline for each sponsor. Figures 2-4 use stacked bar charts, with principal investigators (PIs) on the x-axis and the total amount of funding for projects ending in 2024 and beyond on the y-axis. Similarly, projects expiring in 2024 are represented using a red channel. The PIs are ordered by decreasing total funding amount, allowing for quick identification of the researchers with the most funding.
+
+Examining each sponsor individually, it is evident that for both NIH and NSF, the top five PIs in terms of total funding received have significantly higher amounts compared to other researchers, displaying a clear "head" trend in funding distribution (Fig2, 4, Table S1).
+
+![](images/Fig1.png)
+
+![](images/Fig2.png)
+
+![](images/Fig3.png)
+
+![](images/Fig4.png)
+
+## 3.2 Analyzing Trends in Proportional Representation of New Awards by Funding Source
+
+To investigate the trends in new awards from different institutions to the University of Idaho (UI) over the past 10 years, I chose to use a line chart. The line chart effectively reflects trends and allows for a clear comparison of trend changes between institutions. The x-axis represents the starting year of the project as the grant time for new projects, while the y-axis shows the number of new projects awarded by different institutions. The institutions are distinguished using two channels: color and different line styles, which helps readers quickly differentiate between institution types(Fig 5.).
+
+The chart reveals that from 2015 to 2021, the number of new projects from USDA showed an initial decline (2015-2018) followed by an increase (2018-2021), maintaining an overall upward trend. However, after 2021, the number of new projects rapidly decreased (2021-2023). For NSF projects, the overall trend remained stable, with the number of projects per year consistently between 10 and 20 over the past decade. Regarding NIH projects, there was a sharp increase in 2015, reaching 35 projects, followed by a steady decline. Although there was a rebound to nearly 20 projects in 2018, it eventually plummeted again. Despite a slight recovery in the past 3 years, the number of projects remains between 0 and 5, similar to the level 10 years ago.
+
+DOE only had projects in 2020 and 2021, with no new projects granted subsequently.
+
+In summary, USDA and NIH have experienced overall declining trends in new projects, with USDA showing more fluctuations and NIH demonstrating a more consistent decrease. NSF, on the other hand, has maintained a relatively stable number of new projects over the past decade. These trends suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding, while leveraging the stability of NSF support. Further investigation into the potential causes behind these trends, such as changes in funding priorities or shifts in UI's research focus, could provide valuable insights for informed decision-making and strategic planning.
+
+![](images/Number%20of%20New%20Awards.png)
+
+## 3.3 Comparative Analysis of University of Idaho's Performance with Peer Institutions
+
+### 3.3.1 Data Preparation and Metrics
+
+To assess the performance of each university, I selected data from the past five years (2019-2023) and processed the data as follows:
+
+Calculated the average annual funding per project (Mean Award Amount) for each university from different sponsors. This was done by dividing the total funding from each sponsor in a given year by the number of projects. This approach considers both the total funding and the number of projects, eliminating differences due to university size. Subtracted the University of Idaho's average project funding from each university's average project funding to determine the relative funding difference. A positive value indicates that the other university received more funding than the University of Idaho, while a negative value indicates less funding. Added the relative funding differences from all four sponsors to obtain the overall funding difference between each university and the University of Idaho for each year (Fig 10). Used a bar chart to visually compare the differences between universities and the University of Idaho across different years, with colors distinguishing the years.
+
+### 3.3.2 Analysis for each sponser
+
+Overall (Fig 10), the University of Idaho(UI) performs better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University.
+
+#### 3.3.2.1 DOE Analysis
+
+The University of Idaho performs similarly to Idaho State University and the University of Montana, worse than Washington State University, and significantly behind Montana State University. Notably, Boise State University received a large grant in 2023, leading to its superior performance compared to UI (Fig 6).
+
+Considering these results along with the findings from Q2 regarding the number of projects, UI's competitiveness in DOE projects appears to be relatively weak.
+
+#### 3.3.2.2 NIH Analysis
+
+UI performs better than Idaho State University but lags behind the other universities in all years except 2022. Combined with the declining trend in the number of NIH projects from Q2, it can be concluded that UI is less competitive than the other universities in securing NIH funding (Fig 7).
+
+#### 3.3.2.4 NSF Analysis
+
+In NSF projects, UI consistently outperforms the other universities and maintains its lead. Considering the stable trend in the number of new NSF projects from Q2, UI appears to have a strong and consistent competitive edge in NSF projects (Fig 8).
+
+#### 3.3.2.5 USDA Analysis
+
+For USDA projects, UI consistently outperforms Idaho State University, slightly surpasses Boise State University, marginally lags behind the University of Montana, and significantly trails Washington State University and Montana State University (Fig 9).
+
+Overall, UI has some competitiveness in USDA projects but falls behind Montana State University and Washington State University.
+
+![](images/DOE_plot.png)
+
+![](images/NIH_plot-01.png)
+
+![](images/NSF_plot.png)
+
+![](images/USDA_plot.png)
+
+![](images/Overall-all-Q3.png)
+
+# Summary
+
+This analysis aimed to provide a comprehensive understanding of the University of Idaho's (UI) research funding portfolio by addressing three key questions: (1) the current state of active research awards, (2) trends in the proportional representation of new awards from various funding sources, and (3) UI's performance compared to peer institutions.
+
+The investigation of active research awards revealed that for NIH and NSF, the top five principal investigators (PIs) receive significantly higher funding amounts compared to other researchers, indicating a "head" trend in funding distribution. The analysis of new award trends over the past decade showed that USDA and NIH experienced overall declining trends, with USDA exhibiting more fluctuations and NIH demonstrating a more consistent decrease. In contrast, NSF maintained a relatively stable number of new projects. These findings suggest that UI may need to explore new funding sources to compensate for the declines in USDA and NIH funding while leveraging the stability of NSF support.
+
+The comparative analysis of UI's performance against peer institutions employed a metric based on the average annual funding per project, which considered both total funding and the number of projects. Overall, UI performed better than Idaho State University, on par with Boise State University and the University of Montana, slightly worse than Washington State University, and significantly behind Montana State University. UI's competitiveness varied across sponsors, with a relatively weak position in DOE projects, less competitiveness in NIH funding compared to most peers, a strong and consistent competitive edge in NSF projects, and some competitiveness in USDA projects, although falling behind Montana State University and Washington State University.
+
+These findings provide valuable insights into UI's research funding landscape, highlighting strengths, areas for improvement, and potential strategies for ensuring the sustainability and growth of its research enterprise. The analysis emphasizes the importance of diversifying funding sources, particularly in light of declining trends from certain sponsors, and focusing on maintaining and enhancing competitiveness in areas of strength, such as NSF projects. Furthermore, the comparative analysis with peer institutions offers a benchmark for evaluating UI's performance and identifies potential areas for learning and collaboration.
+
+# Supplementary Information
+
+## Tabel S1: Active Research Awards by Sponsor, Principal Investigator, and End Date
+
+| Instrction | Start year | End year | Award amount | PI                                  |
+|--------------|--------------|--------------|--------------|----------------|
+| DOE        | 2020       | 2024     | 603903       | Yager, Elowyn                       |
+| DOE        | 2021       | 2024     | 1404162      | Marx, Christopher                   |
+| DOE        | 2021       | 2024     | 1519359      | Vasdekis, Andreas                   |
+| DOE        | 2021       | 2024     | 1812000      | Sammarruca, Francesca               |
+| NIH        | 2019       | 2024     | 61038        | JOHNSON, JILL L                     |
+| NIH        | 2021       | 2024     | 181821       | GRIESHABER, SCOTT S                 |
+| NIH        | 2019       | 2024     | 285011       | JOHNSON, JILL L                     |
+| NIH        | 2019       | 2024     | 346779       | MARTIN, BRYN ANDREW                 |
+| NIH        | 2018       | 2024     | 362003       | FORTUNATO, ELIZABETH A              |
+| NIH        | 2018       | 2024     | 428581       | MCGUIRE, MICHELLE KAY               |
+| NIH        | 2018       | 2024     | 460341       | LUCKHART, SHIRLEY                   |
+| NIH        | 2023       | 2025     | 34078        | PATEL, JAGDISH SURESH               |
+| NIH        | 2023       | 2025     | 64727        | VAN LEUVEN, JAMES                   |
+| NIH        | 2015       | 2025     | 147472       | FU, AUDREY QIUYAN                   |
+| NIH        | 2015       | 2025     | 152932       | VAN LEUVEN, JAMES                   |
+| NIH        | 2015       | 2025     | 153149       | FU, AUDREY QIUYAN                   |
+| NIH        | 2015       | 2025     | 156572       | PATEL, JAGDISH SURESH               |
+| NIH        | 2015       | 2025     | 163515       | REMIEN, CHRISTOPHER HASKELL         |
+| NIH        | 2015       | 2025     | 181902       | XIAN, MIN                           |
+| NIH        | 2015       | 2025     | 199138       | XIAN, MIN                           |
+| NIH        | 2015       | 2025     | 266181       | WICHMAN, HOLLY A                    |
+| NIH        | 2020       | 2025     | 348389       | MITCHELL, DIANA                     |
+| NIH        | 2020       | 2025     | 357664       | MITCHELL, DIANA                     |
+| NIH        | 2020       | 2025     | 359164       | MITCHELL, DIANA                     |
+| NIH        | 2020       | 2025     | 359906       | MITCHELL, DIANA                     |
+| NIH        | 2015       | 2025     | 492598       | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 677022       | MILLER, CRAIG R                     |
+| NIH        | 2015       | 2025     | 715546       | MILLER, CRAIG R                     |
+| NIH        | 2015       | 2025     | 764637       | MILLER, CRAIG R                     |
+| NIH        | 2015       | 2025     | 1025023      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 1040007      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 1138359      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 2172986      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 2194934      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 2206645      | WICHMAN, HOLLY A                    |
+| NIH        | 2015       | 2025     | 2212500      | WICHMAN, HOLLY A                    |
+| NIH        | 2023       | 2026     | 171789       | HERNANDEZ VARGAS, ESTEBAN ABERLARDO |
+| NIH        | 2022       | 2026     | 544548       | LUCKHART, SHIRLEY                   |
+| NIH        | 2022       | 2026     | 556756       | LUCKHART, SHIRLEY                   |
+| NIH        | 2016       | 2027     | 367126       | NUISMER, SCOTT L                    |
+| NIH        | 2023       | 2028     | 98616        | WAYNANT, KRISTOPHER V               |
+| NIH        | 2023       | 2028     | 263413       | ROBISON, BARRIE D                   |
+| NIH        | 2024       | 2029     | 153322       | LANE, GINNY                         |
+| NIH        | 2024       | 2029     | 162320       | CHEN, YIMIN                         |
+| NIH        | 2024       | 2029     | 300000       | MCGUIRE, MICHELLE KAY               |
+| NIH        | 2024       | 2029     | 331232       | BROWN, ANN FROST                    |
+| NIH        | 2024       | 2029     | 461621       | WILLIAMS, JANET E.                  |
+| NIH        | 2024       | 2029     | 946131       | MCGUIRE, MICHELLE KAY               |
+| NIH        | 2024       | 2029     | 2354626      | MCGUIRE, MICHELLE KAY               |
+| NSF        | 2021       | 2024     | 78630        | Erika Rader                         |
+| NSF        | 2023       | 2024     | 99445        | Indrajit Charit                     |
+| NSF        | 2019       | 2024     | 108245       | Leslie L Baker                      |
+| NSF        | 2020       | 2024     | 117607       | Grant Harley                        |
+| NSF        | 2022       | 2024     | 118517       | Zachariah B Etienne                 |
+| NSF        | 2021       | 2024     | 128702       | Grant Harley                        |
+| NSF        | 2022       | 2024     | 226347       | Zachariah B Etienne                 |
+| NSF        | 2021       | 2024     | 227519       | Karla Eitel                         |
+| NSF        | 2021       | 2024     | 335902       | Zachariah B Etienne                 |
+| NSF        | 2022       | 2024     | 344599       | Jessica R Stanley                   |
+| NSF        | 2019       | 2024     | 348957       | Elowyn Yager                        |
+| NSF        | 2019       | 2024     | 500000       | Andrew S Nelson                     |
+| NSF        | 2021       | 2024     | 539714       | William J Reeder                    |
+| NSF        | 2016       | 2024     | 558035       | Daniele Tonina                      |
+| NSF        | 2020       | 2024     | 586223       | Adam G Jones                        |
+| NSF        | 2014       | 2024     | 597487       | Jerry R McMurtry                    |
+| NSF        | 2019       | 2024     | 651698       | Michael S Strickland                |
+| NSF        | 2020       | 2024     | 671486       | Timothy C Bartholomaus              |
+| NSF        | 2019       | 2024     | 729932       | Elizabeth J Cassel                  |
+| NSF        | 2018       | 2024     | 1777713      | Christopher J Marx                  |
+| NSF        | 2020       | 2024     | 5830709      | Xiaogang Ma                         |
+| NSF        | 2018       | 2024     | 20000000     | Andrew D Kliskey                    |
+| NSF        | 2023       | 2025     | 45380        | Alexander Woo                       |
+| NSF        | 2022       | 2025     | 140899       | Eva M Top                           |
+| NSF        | 2022       | 2025     | 199946       | Johnny Li                           |
+| NSF        | 2023       | 2025     | 208292       | Elowyn Yager                        |
+| NSF        | 2023       | 2025     | 250000       | Esteban A Hernandez Vargas          |
+| NSF        | 2021       | 2025     | 336514       | Andreas E Vasdekis                  |
+| NSF        | 2022       | 2025     | 402341       | Nathan R Schiele                    |
+| NSF        | 2021       | 2025     | 443170       | Leda N Kobziar                      |
+| NSF        | 2019       | 2025     | 449355       | Lilian Alessa                       |
+| NSF        | 2018       | 2025     | 599643       | Eric L Mittelstaedt                 |
+| NSF        | 2021       | 2025     | 677575       | Laurel Lynch                        |
+| NSF        | 2019       | 2025     | 749639       | Andrew D Kliskey                    |
+| NSF        | 2021       | 2025     | 792475       | Xiaogang Ma                         |
+| NSF        | 2024       | 2025     | 1000000      | Tara Hudiburg                       |
+| NSF        | 2020       | 2025     | 1028242      | Adam G Jones                        |
+| NSF        | 2018       | 2025     | 1093880      | Christine E Parent                  |
+| NSF        | 2020       | 2025     | 1368804      | Julie M Amador                      |
+| NSF        | 2021       | 2025     | 3974309      | Michael Maughan                     |
+| NSF        | 2023       | 2026     | 156022       | Grant Harley                        |
+| NSF        | 2023       | 2026     | 359828       | Amin Mirkouei                       |
+| NSF        | 2023       | 2026     | 443525       | Andrew Tranmer                      |
+| NSF        | 2021       | 2026     | 499866       | Christine E Parent                  |
+| NSF        | 2023       | 2026     | 509641       | Eric L Mittelstaedt                 |
+| NSF        | 2024       | 2026     | 628415       | Dave Lien                           |
+| NSF        | 2023       | 2026     | 645273       | Kristopher V Waynant                |
+| NSF        | 2023       | 2026     | 664468       | Scott L Nuismer                     |
+| NSF        | 2022       | 2026     | 2999999      | Vanessa Anthony-Stevens             |
+| NSF        | 2021       | 2026     | 18950955     | Michael S Strickland                |
+| NSF        | 2022       | 2027     | 276000       | Jerry R McMurtry                    |
+| NSF        | 2024       | 2027     | 456051       | Kristopher V Waynant                |
+| NSF        | 2022       | 2027     | 898220       | Paul A Rowley                       |
+| NSF        | 2022       | 2027     | 1016312      | Chris A Hamilton                    |
+| NSF        | 2023       | 2027     | 1179977      | Julie M Amador                      |
+| NSF        | 2023       | 2027     | 2435509      | Lilian Alessa                       |
+| NSF        | 2022       | 2027     | 4460195      | Jim Alves-Foss                      |
+| NSF        | 2023       | 2028     | 250000       | Shirley Luckhart                    |
+| NSF        | 2023       | 2028     | 20000000     | Andrew D Kliskey                    |
+
+## Code fold
+
+### Q1
+
+```{r}
+
+#比例图
+library(ggplot2)
+
+# 创建数据框
+data <- data.frame(
+  Sponsor = c("DOE", "NSF", "NIH"),
+  Expiring_2024 = c(4, 22, 7),
+  Active_After_2024 = c(0, 37, 38)
+)
+
+# 将数据框转换为长格式
+data_long <- tidyr::pivot_longer(data, cols = c("Expiring_2024", "Active_After_2024"), 
+                                 names_to = "Status", values_to = "Count")
+
+# 绘制分组柱状图
+ggplot(data_long, aes(x = Sponsor, y = Count, fill = Status)) + 
+  geom_col(position = "dodge") +
+  geom_text(aes(label = Count), position = position_dodge(width = 0.9), 
+            vjust = -0.5, size = 4) +
+  scale_fill_manual(values = c("Expiring_2024" = "red", "Active_After_2024" = "blue"),
+                    labels = c("Active After 2024", "Expiring in 2024")) +
+  labs(title = "Fig1. Project Status by Sponsor",
+       x = "Sponsor", y = "Number of Projects") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+
+#NSF
+
+library(ggplot2)
+library(dplyr)
+# 读取数据
+
+data <- read.csv("NSF-UI.csv", stringsAsFactors = FALSE)
+
+# 筛选2024年及以后的项目
+data_filtered <- data %>% 
+  filter(End.year >= 2024) %>%
+  select(End.year, Award.amount, PI)
+  
+# 将2024年之后的年份替换为"After 2024"
+data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
+
+
+# 按Award.amount降序排列
+data_filtered <- data_filtered %>%
+  arrange(desc(Award.amount))
+
+# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
+
+# 绘制柱形图
+ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
+  geom_col() +
+  #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
+  scale_fill_manual(values = c("2024" = "red", "After 2024"="blue"), name = "End Year") +
+  labs(title = "Fig2.NSF Awards to University of Idaho (2024 and Beyond)",
+       x = "Principal Investigator", y = "Award Amount") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5, face = "bold")) 
+        
+#DOE
+library(ggplot2)
+library(dplyr)
+# 读取数据
+
+data <- read.csv("DOE-UI.csv", stringsAsFactors = FALSE)
+
+# 筛选2024年及以后的项目
+data_filtered <- data %>% 
+  filter(End.year >= 2024) %>%
+  select(End.year, Award.amount, PI)
+  
+# 将2024年之后的年份替换为"After 2024"
+data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
+
+
+# 按Award.amount降序排列
+data_filtered <- data_filtered %>%
+  arrange(desc(Award.amount))
+
+# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
+
+# 绘制柱形图
+ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
+  geom_col() +
+  #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
+  scale_fill_manual(values = c("2024" = "red", "After 2024"="blue"), name = "End Year") +
+  labs(title = "Fig3. DOE Awards to University of Idaho (2024 and Beyond)",
+       x = "Principal Investigator", y = "Award Amount") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5, face = "bold")) 
+        
+#NIH
+library(ggplot2)
+library(dplyr)
+# 读取数据
+
+data <- read.csv("NIH-UI.csv", stringsAsFactors = FALSE)
+
+# 筛选2024年及以后的项目
+data_filtered <- data %>% 
+  filter(End.year >= 2024) %>%
+  select(End.year, Award.amount, PI)
+  
+# 将2024年之后的年份替换为"After 2024"
+data_filtered$End.year <- ifelse(data_filtered$End.year > 2024, "After 2024", as.character(data_filtered$End.year))
+
+
+# 按Award.amount降序排列
+data_filtered <- data_filtered %>%
+  arrange(desc(Award.amount))
+
+# 将PI转换为因子变量,并按Award.amount的顺序排列水平
+data_filtered$PI <- factor(data_filtered$PI, levels = unique(data_filtered$PI))
+
+# 绘制柱形图
+ggplot(data_filtered, aes(x = PI, y = Award.amount, fill = factor(End.year))) +
+  geom_col() +
+  #geom_text(aes(label = Award.amount), vjust = -0.5, size = 3) +
+  scale_fill_manual(values = c("2024" = "red", "After 2024"="blue"), name = "End Year") +
+  labs(title = "Fig4. NIH Awards to University of Idaho (2024 and Beyond)",
+       x = "Principal Investigator", y = "Award Amount") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+### Q2
+
+```{r}
+Sponsers<-c("DOE","NIH","NSF","USDA")
+
+for (Sponser in Sponsers){
+
+# 读取CSV文件
+data <- read.csv(paste0(Sponser,"-all.csv"), header = TRUE, stringsAsFactors = FALSE)
+
+# 按照Start year分组，计算每年的Award amount总和和项目数量
+result <- aggregate(cbind(Award.amount, n = 1) ~ University + Start.year, data = data, FUN = sum)
+
+# 重命名列
+colnames(result) <- c("University", "Start.year", "Award.amount", "n")
+
+# 按照University和Start.year排序
+result <- result[order(result$University, result$Start.year), ]
+
+# 输出结果
+print(result)
+
+write.csv(result, file = paste0("E:/01-文件/04-UI文件/2401-【课程】BCB/BCB-Mid/00-Temp/Q2/",Sponser,"-all-Q2.csv"), row.names = FALSE)
+
+}
+
+# 读取CSV文件
+data <- read.csv("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q2\\UI统计表.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# 加载ggplot2包
+library(ggplot2)
+
+# 筛选2013年至2023年的数据
+data_filtered <- subset(data, Start.year >= 2013 & Start.year <= 2023)
+
+# 绘制折线图
+ggplot(data_filtered, aes(x = Start.year, y = n, color = Sponser
+, linetype = Sponser
+)) +
+  geom_line(size = 1) +
+  scale_color_manual(values = c("USDA" = "blue", "NSF" = "green", "NIH" = "orange", "DOE" = "red")) +
+  scale_linetype_manual(values = c("USDA" = "solid", "NSF" = "dashed", "NIH" = "dotted", "DOE" = "dotdash")) +
+  labs(x = "Year", y = "Number of New Awards", title = "Fig5: New Awards from Different Sponsors") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 12),
+        legend.position = "bottom") +
+  scale_x_continuous(breaks = seq(2013, 2023, by = 1))
+```
+
+### Q3
+
+```{r}
+# 定义文件名列表
+file_names <- c("DOE-all-Q2.csv", "NIH-all-Q2.csv", "NSF-all-Q2.csv", "USDA-all-Q2.csv")
+
+# 定义输出文件名列表
+output_names <- c("DOE-all-Q3.csv", "NIH-all-Q3.csv", "NSF-all-Q3.csv", "USDA-all-Q3.csv")
+
+# 循环处理每个文件
+for (i in seq_along(file_names)) {
+  # 读取文件
+  data <- read.csv(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", file_names[i]), header = TRUE, stringsAsFactors = FALSE)
+  
+  # 创建一个新的数据框来存储结果
+  result <- data.frame(University = character(), Start.year = numeric(), Difference.Value = numeric(), stringsAsFactors = FALSE)
+  
+  # 获取University of Idaho的数据
+  ui_data <- data[data$University == "University of Idaho", ]
+  
+  # 计算每个学校的Difference.Value值
+  for (j in unique(data$Start.year)) {
+    year_data <- data[data$Start.year == j, ]
+    ui_mean <- ui_data$Mean[ui_data$Start.year == j]
+    
+    for (k in unique(year_data$University)) {
+      if (k != "University of Idaho") {
+        university_mean <- year_data$Mean[year_data$University == k]
+        difference_value <- university_mean - ui_mean
+        
+        result <- rbind(result, data.frame(University = k, Start.year = j, Difference.Value = difference_value))
+      }
+    }
+  }
+  
+  # 将结果写入CSV文件
+  write.csv(result, paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", output_names[i]), row.names = FALSE)
+}
+
+# 加载所需的包
+library(ggplot2)
+library(dplyr)
+
+# 定义文件名列表
+file_names <- c("DOE-all-Q3.csv", "NIH-all-Q3.csv", "NSF-all-Q3.csv", "USDA-all-Q3.csv","Overall-all-Q3.csv")
+
+# 定义输出图像名列表
+output_names <- c("DOE_plot.png", "NIH_plot.png", "NSF_plot.png", "USDA_plot.png","Overall-all-Q3.png")
+
+# 定义图片标题列表
+plot_titles <- c("Fig6", "Fig7", "Fig8", "Fig9","Fig10")
+
+# 循环处理每个文件
+for (i in seq_along(file_names)) {
+  # 读取文件
+  data <- read.csv(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", file_names[i]), header = TRUE, stringsAsFactors = FALSE)
+  
+  # 筛选近5年(2019-2023)的数据
+  data_filtered <- data %>% filter(Start.year >= 2019 & Start.year <= 2023)
+  
+  # 将University列转换为因子变量,并指定顺序
+  data_filtered$University <- factor(data_filtered$University, levels = c("Boise State University", "Idaho State University", "Montana State University", "University of Montana", "Washington State University"))
+  
+  # 创建柱状图
+  plot <- ggplot(data_filtered, aes(x = University, y = Difference.Value, fill = factor(Start.year))) +
+    geom_bar(stat = "identity", position = "dodge") +
+    labs(title = paste0(plot_titles[i], ": Difference in Mean Award Amount (", gsub("-all-Q3.csv", "", file_names[i]), ")"),
+         x = "University",
+         y = "Difference Value",
+         fill = "Start Year") +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+          axis.text.x = element_text(angle = 0),
+          legend.position = "bottom") +
+    scale_fill_discrete(name = "Start Year")
+  
+  print(plot)
+  # 保存图像
+  ggsave(paste0("E:\\01-文件\\04-UI文件\\2401-【课程】BCB\\BCB-Mid\\00-Temp\\Q3\\", output_names[i]), plot, width = 10, height = 6, dpi = 300)
+}
+```
