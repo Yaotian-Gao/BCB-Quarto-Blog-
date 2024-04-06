@@ -27,7 +27,7 @@ By analyzing data related to these questions, this post will provide valuable in
 Data Sources Summary: This analysis utilizes data from four major U.S. research funding agencies: the Department of Agriculture (USDA NIFA), Department of Energy(DOE), National Institutes of Health (NIH), and National Science Foundation (NSF). The data was obtained from the following sources:
 
 | Data Source               | Description                                                         | URL                                                                                               |
-|-------------------|---------------------------|---------------------------|
+|---------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | NIFA Award Database       | Public database of awards granted by the NIFA                       | <https://portal.nifa.usda.gov/lmd4/recent_awards>                                                 |
 | Department of Energy PAMS | External award search interface for the Department of Energy's PAMS | <https://pamspublic.science.energy.gov/WebPAMSExternal/interface/awards/AwardSearchExternal.aspx> |
 | NIH RePORTER API          | API providing access to NIH research grant data                     | <https://api.reporter.nih.gov/documents/Data%20Elements%20for%20RePORTER%20Project%20API_V2.pdf>  |
@@ -124,7 +124,7 @@ These findings provide valuable insights into UI's research funding landscape, h
 ## Tabel S1: Active Research Awards by Sponsor, Principal Investigator, and End Date
 
 | Instrction | Start year | End year | Award amount | PI                                  |
-|---------------|---------------|---------------|---------------|---------------|
+|------------|------------|----------|--------------|-------------------------------------|
 | DOE        | 2020       | 2024     | 603903       | Yager, Elowyn                       |
 | DOE        | 2021       | 2024     | 1404162      | Marx, Christopher                   |
 | DOE        | 2021       | 2024     | 1519359      | Vasdekis, Andreas                   |

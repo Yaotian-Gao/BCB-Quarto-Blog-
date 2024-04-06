@@ -1,0 +1,138 @@
+---
+title: "BCB 520 - Network Data Practice" 
+subtitle: "" 
+author: "Yaotian Gao" 
+date: "2024-04-06" 
+categories: [data visualization, Network Data] 
+description: "" 
+format: html 
+editor: visual
+image: "1.png"
+code-fold: true
+toc: true
+---
+
+# Introduction
+
+In this assignment, we'll consider some of the tools and techniques for visualizing network data. Network data is characterized by two unique items that are not found in tabular or spatial data - Nodes and Links. In addition, there is a sub-type of network data that we will consider - Hierarchical or Tree data. Let's practice a few visualizations to get a feel for how these things work.
+
+# ASSIGNMENT1-3
+
+Improve the network above by:
+
+1.  Coloring the edges according to Advisor / BCB520 attribute.
+2.  Coloring the nodes according to Department.
+3.  Adujsting the labels to improve readability.
+
+# Code
+
+```{r}
+library(igraph)
+library(readxl)
+library(dplyr)
+
+people<-read.csv("people.csv")
+relations3<-read.csv("relations3.csv")
+g <- graph_from_data_frame(relations3, directed=FALSE, vertices=people)
+
+# 根据Advisor和BCB520属性设置边的颜色
+edge_colors <- ifelse(relations3$Advisor, "blue",
+                      ifelse(relations3$BCB520, "red", "grey"))
+
+# 根据Department设置节点的颜色
+dept_colors <- c("Biology" = "lightblue", "EPPN" = "lightgreen",
+                 "FCS" = "orange", "CNR" = "yellow", 
+                 "Math" = "pink", "PlantSci" = "purple")
+vertex_colors <- dept_colors[V(g)$department]
+
+# 绘制图形,并为图例留出空间
+par(mar = c(1, 1, 1, 7))  # 设置图形的边距,右侧留出更多空间
+plot(g, edge.color = edge_colors, vertex.color = vertex_colors,
+     vertex.label = V(g)$name, vertex.label.color = "black",
+     vertex.label.cex = 0.8, vertex.label.dist = 2)
+
+# 添加关系类型图例
+legend(x = 1.4, y = 1, c("Advisor", "BCB520"),
+       lty = 1, col = c("blue", "red"),  # 使用线条类型和颜色
+       lwd = 2,  # 设置线条宽度
+       border = NA,
+       bty = "n", 
+       cex = 0.6,
+       xpd = TRUE,
+       title="Relation")
+
+# 添加部门颜色图例  
+legend(x = 1.5, y = 0.35, names(dept_colors),  # 调整图例的y坐标
+       pch = 21, pt.bg = dept_colors,  # 使用填充圆形
+       pt.cex = 1.5,  # 设置圆形大小
+       border = NA,
+       bty = "n",
+       cex = 0.6, 
+       xpd = TRUE,
+       title="Department")
+```
+
+# Results
+
+![](images/1,2,3.png)**Fig.1** Relationship Network of BCB520 Course and Advisor-Student Interactions across Different Departments. Edge colors: Blue for "Advisor" relationships, Red for "BCB520" relationships, Node colors: Representing different departments (Biology, EPPN, FCS, CNR, Math, PlantSci)
+
+Figure 1 presents the improved network graph, showcasing the relationships between students, advisors, and course participants in the BCB520.
+
+The enhancements made to the network graph include:
+
+1.  Edge colors: Blue edges represent "Advisor" relationships between students and their advisors, while red edges represent "BCB520" relationships, indicating that both individuals are participants in the BCB520 course.
+2.  Node colors: Different colors were used to represent various departments, including Biology, EPPN, FCS, CNR, Math, and PlantSci. Individuals from the same department share the same node color.
+3.  Label placement: Labels were positioned next to the nodes instead of inside them, enhancing clarity and avoiding overlap. These improvements significantly enhance the visual appeal, interpretability, and ability of the network graph to convey meaningful information about the relationships within the BCB520 course and across different departments.
+
+# ASSIGNMENT4
+
+4.  Find the best layout you can for this garbage
+
+# Code
+
+```{r}
+
+library(igraph)
+library(readxl)
+library(dplyr)
+
+people<-read.csv("people.csv")
+relations3<-read.csv("relations3.csv")
+g <- graph_from_data_frame(relations3, directed=FALSE, vertices=people)
+
+# 根据Advisor和BCB520属性设置边的颜色
+edge_colors <- ifelse(relations3$Advisor, "blue",
+                      ifelse(relations3$BCB520, "red", "grey"))
+
+# 根据Department设置节点的颜色
+dept_colors <- c("Biology" = "lightblue", "EPPN" = "lightgreen",
+                 "FCS" = "orange", "CNR" = "yellow", 
+                 "Math" = "pink", "PlantSci" = "purple")
+vertex_colors <- dept_colors[V(g)$department]
+
+# 定义绘制子图函数
+plot_subnet <- function(subnet, layout, main) {
+  par(mar = c(1, 1, 1, 7))
+  plot(subnet, edge.color = edge_colors, vertex.color = vertex_colors,
+       vertex.label = V(subnet)$name, vertex.label.color = "black",
+       vertex.label.cex = 0.8, vertex.label.dist = 2, 
+       layout = layout, main = main)
+}
+
+# 设置拼接图形的布局
+par(mfrow = c(2, 2), mar = c(1, 1, 2, 1))
+
+# 绘制不同布局的子图,并在标题中添加编号
+plot_subnet(g, layout_nicely(g), "(a) layout_nicely")
+plot_subnet(g, layout_with_fr(g), "(b) layout_with_fr") 
+plot_subnet(g, layout_with_kk(g), "(c) layout_with_kk")
+plot_subnet(g, layout_with_graphopt(g), "(d) layout_with_graphopt")
+```
+
+# Results
+
+![](images/4.png)
+
+**Fig. 2** Multi-layout Comparison of Relationship Network. (a) layout_nicely: Force-directed layout for aesthetically pleasing visualization with minimal edge crossings, (b) layout_with_fr: Fruchterman-Reingold force-directed layout, attracting connected nodes and repelling unconnected ones, (c) layout_with_kk: Kamada-Kawai force-directed layout based on shortest path distances, revealing symmetry and structure , (d) layout_with_graphopt: Graphopt algorithm layout using simulated annealing, minimizing edge crossings and total graph area,Edge colors: Blue for "Advisor" relationships, Red for "BCB520" relationships, Node colors: Representing different departments (Biology, EPPN, FCS, CNR, Math, PlantSci)
+
+Eventually, I found that the results of these algorithms seem to be very similar, and they can effectively show the relationships and structures in the network
