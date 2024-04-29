@@ -1,0 +1,15 @@
+{
+  "hash": "44bc5a61e3721b29826fc7b5658aacc5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# 载入需要的包\nlibrary(reshape2)\nlibrary(ggplot2)\ntraits=c(\"YLD\")\n\nfor (trait in traits){\n# 读取数据\n  data <- read.csv(paste0(\"YLD (1).csv\"), header = TRUE)\n  \n  # 将数据从宽格式转换为长格式\n  data_melted <- melt(data)\n  \n  # 移除variable列值中的开头的'X'\n  data_melted$variable <- sub('^X', '', data_melted$variable)\n\n  # 绘制Boxplot\n # 绘制Boxplot\n  p<-ggplot(data_melted, aes(x = variable, y = value)) +\n    geom_boxplot() +\n    theme(axis.text.x = element_text(angle = 0, size = 30), # 修改X轴字体大小\n        axis.text.y = element_text(size = 30), # 修改Y轴字体大小\n        axis.title.x = element_text(size = 30), # 修改X轴标题字体大小\n        axis.title.y = element_text(size = 30)) + # 修改Y轴标题字体大小\n   labs(x = \"Model\", y = paste0(\"Prediction Accuracy for \",trait), title = \"\")\n  print(p)\n\n\n}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

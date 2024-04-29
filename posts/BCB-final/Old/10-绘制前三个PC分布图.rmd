@@ -1,0 +1,37 @@
+# 加载需要的库
+library(plotly)
+library(ggplot2)
+
+# 读取数据
+pca_data <- read.csv("PCA.csv")
+
+# 设定来源及其对应的品种数量
+source_levels <- c("UI", "UCD", "WSU", "CIMMYT", "MSU", "USDA", "Other")
+source_counts <- c(111,34,26,25,25,18,10) 
+
+# 创建带有数量的新级别
+source_levels_with_counts <- paste(source_levels, "(", source_counts, ")", sep = "")
+
+# 将Source变量转换为一个有序因子，并将级别设置为新创建的带有数量的级别
+pca_data$Source <- factor(pca_data$Source, levels = source_levels, labels = source_levels_with_counts)
+
+# 为每个来源指定颜色
+source_colors <- c("blue", "red", "gray", "purple", "orange", "black", "green")
+colors <- setNames(source_colors, source_levels_with_counts) # 创建颜色与来源的映射
+
+# 使用plotly绘制3D PCA图
+fig <- plot_ly(pca_data, x = ~PC1, y = ~PC2, z = ~PC3, color = ~Source, colors = colors, type = 'scatter3d', mode = 'markers',
+               marker = list(size = 5)) %>% # 改变点的大小
+  layout(title = "",
+         scene = list(xaxis = list(title = 'Pcomp1:6.3%',titlefont = list(size = 24), tickfont = list(size = 14)),
+                      yaxis = list(title = 'Pcomp2:5.4%',titlefont = list(size = 24), tickfont = list(size = 14)),
+                      zaxis = list(title = 'Pcomp3:4.4%',titlefont = list(size = 24), tickfont = list(size = 14))),
+         legend = list(title = list(text = ''), # 设置图例标题
+                       traceorder = 'normal', # 设置图例中条目的顺序
+                       font = list(size = 20), # 设置图例文本大小
+                       bgcolor = 'rgba(255, 255, 255, 0.5)', # 设置图例背景色
+                       bordercolor = 'rgba(0, 0, 0, 0.5)', # 设置图例边框颜色
+                       borderwidth = 1)) # 设置图例边框宽度
+                      
+# 显示图形
+fig

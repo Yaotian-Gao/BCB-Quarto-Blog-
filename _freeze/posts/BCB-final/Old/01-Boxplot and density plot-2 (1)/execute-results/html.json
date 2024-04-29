@@ -1,0 +1,15 @@
+{
+  "hash": "0b2b2828c0cabb1577520c6ab0774fd8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# 载入需要的包\nlibrary(reshape2)\nlibrary(ggplot2)\ntraits=c(\"HD\",\"PHT\",\"TKW\",\"tSNS\",\"YLD\")\nsave_dir<- \"E:\\\\06-实验\\\\00-6-GP502-GWAS\\\\06-第一篇文章数据\\\\03-Population Division(RF)\\\\Data and Code used for analysis\\\\\"\n\nfor (trait in traits){\n# 读取数据\n  data <- read.csv(paste0(\"E:\\\\06-实验\\\\00-6-GP502-GWAS\\\\06-第一篇文章数据\\\\03-Population Division(RF)\\\\Data and Code used for analysis\\\\\",trait,\".csv\"), header = TRUE)\n  \n  # 将数据从宽格式转换为长格式\n  data_melted <- melt(data)\n  \n  # 移除variable列值中的开头的'X'\n  data_melted$variable <- sub('^X', '', data_melted$variable)\n\n  # 绘制Boxplot\n # 绘制Boxplot\n  p<-ggplot(data_melted, aes(x = variable, y = value)) +\n    geom_boxplot() +\n    theme(axis.text.x = element_text(angle = 0, size = 30), # 修改X轴字体大小\n        axis.text.y = element_text(size = 30), # 修改Y轴字体大小\n        axis.title.x = element_text(size = 30), # 修改X轴标题字体大小\n        axis.title.y = element_text(size = 30)) + # 修改Y轴标题字体大小\n   labs(x = \"Percentage of lines in training set\", y = paste0(\"Prediction Accuracy for \",trait), title = \"\")\n  print(p)\n\n  # 构建文件名\n  filename <- paste0(save_dir, \"Boxplot_\", trait, \".png\")\n  \n  # 保存图形\n  ggsave(filename, plot = p, width = 12, height = 8)\n}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

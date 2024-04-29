@@ -1,0 +1,15 @@
+{
+  "hash": "3732f1cb056e71b3563cc7b7ec763a05",
+  "result": {
+    "engine": "knitr",
+    "markdown": "library(dplyr)\nlibrary(tidyr)\nlibrary(ggplot2)\n\n\n\n\n######\n# 读取数据\ndata <- read.csv(\"YLD.csv\")\n\n######\n\n# 将所有以YLD开头的列转换为double类型\ndata[grepl(\"^YLD\", names(data))] <- lapply(data[grepl(\"^YLD\", names(data))], as.numeric)\n  \n\n# 将数据转换为长格式\nlong_data <- data %>% \n  pivot_longer(\n    cols = starts_with(\"YLD\"),\n    names_to = \"Year_Rep\",\n    values_to = \"Value\"\n  )\n\n  \n######\nwrite.csv(long_data, file = \"GP502-YLD-adjusted-long_data.csv\", row.names = FALSE)\n######\n\n\n# 查看转换后的数据\nhead(long_data)\n\n# 假设您已经将数据转换为长格式，并存储在long_data中\nlong_data <- long_data %>%\n  mutate(Year = sub(\"-.*\", \"\", Year_Rep))  # 提取年份\n\n# Define a vector of colors including the new one\nmy_colors <- c(\"YLD_BLUPs\" = \"Red\",\"YLD_E3\" =\"#8DD3C7\",\"YLD_E4\" = \"#FDB462\",\"YLD_E5\" =\"#80B1D3\", \"YLD_E1\"=\"yellow\", \"YLD_E2\"=\"#D8BFD8\")\n\n# Density plot with manual colors\np2 <- ggplot(data = long_data, aes(x = Value, fill = Year)) +\n  geom_density(alpha = 0.5) +\n  scale_fill_manual(values = my_colors) +\n  labs(title = \"\", x = \"\", y = \"Density\",fill=\"Environment\") +\n  theme(\n    plot.background = element_rect(fill = \"white\", colour = NA),\n    panel.background = element_rect(fill = \"white\", colour = NA),\n    legend.title = element_text(size = 24),       # Adjust the size of the legend title\n    legend.text = element_text(size = 22),        # Adjust the size of the legend text\n    axis.title.x = element_text(size = 24),       # Adjust the size of the x-axis title\n    axis.title.y = element_text(size = 24),       # Adjust the size of the y-axis title\n    axis.text.x = element_text(size = 22),        # Adjust the size of the x-axis text/labels\n    axis.text.y = element_text(size = 22)         # Adjust the size of the y-axis text/labels\n    )\n\n# Print the plots\nprint(p1)\nprint(p2)\n\n# Optionally, save the plots to a file\nggsave(\"YLD_boxplot_custom_colors.png\", plot = p1, width = 10, height = 8, background = \"white\")\nggsave(\"YLD_density_custom_colors.png\", plot = p2, width = 10, height = 8, background = \"white\")\n\nlibrary(readxl)\n\n## 相关性分析\n## 不同年份相关性分析\n# 读取数据\ndata <- read.csv(\"YLD.csv\")\n\n# 将所有以YLD开头的列转换为double类型\ndata[grepl(\"^YLD\", names(data))] <- lapply(data[grepl(\"^YLD\", names(data))], as.numeric)\n\n# 选择YLD的列 #要更改\nALL_cols <- data[, 3:ncol(data)]  # 假设YLD数据从第4列开始\n\n# 处理缺失值（如果有）\nfor(i in 1:ncol(data)) {\n  if(is.numeric(data[[i]])) {  # 确保只对数值型列操作\n    data[[i]][is.na(data[[i]])] <- mean(data[[i]], na.rm = TRUE)\n  }\n}\n\n\n# 计算相关性矩阵\ncor_matrix <- cor(ALL_cols, use = \"complete.obs\")\n\n# 可视化相关性矩阵\ncorrplot::corrplot(cor_matrix, method = \"color\", addCoef.col = \"black\", tl.col = \"black\", tl.srt = 45)\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

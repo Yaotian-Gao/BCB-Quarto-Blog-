@@ -1,0 +1,15 @@
+{
+  "hash": "8bc341ff0d8bdb08b9748b186403e2bc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "library(readxl)\n\n## 相关性分析\n## 不同年份相关性分析\n# 读取数据\ndata <- read.csv(\"YLD.csv\")\n\n# 将所有以YLD开头的列转换为double类型\ndata[grepl(\"^YLD\", names(data))] <- lapply(data[grepl(\"^YLD\", names(data))], as.numeric)\n\n# 选择YLD的列 #要更改\nALL_cols <- data[, 3:ncol(data)]  # 假设YLD数据从第4列开始\n\n# 处理缺失值（如果有）\nfor(i in 1:ncol(data)) {\n  if(is.numeric(data[[i]])) {  # 确保只对数值型列操作\n    data[[i]][is.na(data[[i]])] <- mean(data[[i]], na.rm = TRUE)\n  }\n}\n\n\n# 计算相关性矩阵\ncor_matrix <- cor(ALL_cols, use = \"complete.obs\")\n\n# 可视化相关性矩阵\ncorrplot::corrplot(cor_matrix, method = \"color\", addCoef.col = \"black\", tl.col = \"black\", tl.srt = 45)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

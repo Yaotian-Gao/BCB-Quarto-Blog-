@@ -1,0 +1,15 @@
+{
+  "hash": "c735dfb5de5cd829fd7aaef63da4b363",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# 加载需要的库\nlibrary(plotly)\nlibrary(ggplot2)\n\n# 读取数据\npca_data <- read.csv(\"PCA.csv\")\n\n# 设定来源及其对应的品种数量\nsource_levels <- c(\"UI\", \"UCD\", \"WSU\", \"CIMMYT\", \"MSU\", \"USDA\", \"Other\")\nsource_counts <- c(111,34,26,25,25,18,10) \n\n# 创建带有数量的新级别\nsource_levels_with_counts <- paste(source_levels, \"(\", source_counts, \")\", sep = \"\")\n\n# 将Source变量转换为一个有序因子，并将级别设置为新创建的带有数量的级别\npca_data$Source <- factor(pca_data$Source, levels = source_levels, labels = source_levels_with_counts)\n\n# 为每个来源指定颜色\nsource_colors <- c(\"blue\", \"red\", \"gray\", \"purple\", \"orange\", \"black\", \"green\")\ncolors <- setNames(source_colors, source_levels_with_counts) # 创建颜色与来源的映射\n\n# 使用plotly绘制3D PCA图\nfig <- plot_ly(pca_data, x = ~PC1, y = ~PC2, z = ~PC3, color = ~Source, colors = colors, type = 'scatter3d', mode = 'markers',\n               marker = list(size = 5)) %>% # 改变点的大小\n  layout(title = \"\",\n         scene = list(xaxis = list(title = 'Pcomp1:6.3%',titlefont = list(size = 24), tickfont = list(size = 14)),\n                      yaxis = list(title = 'Pcomp2:5.4%',titlefont = list(size = 24), tickfont = list(size = 14)),\n                      zaxis = list(title = 'Pcomp3:4.4%',titlefont = list(size = 24), tickfont = list(size = 14))),\n         legend = list(title = list(text = ''), # 设置图例标题\n                       traceorder = 'normal', # 设置图例中条目的顺序\n                       font = list(size = 20), # 设置图例文本大小\n                       bgcolor = 'rgba(255, 255, 255, 0.5)', # 设置图例背景色\n                       bordercolor = 'rgba(0, 0, 0, 0.5)', # 设置图例边框颜色\n                       borderwidth = 1)) # 设置图例边框宽度\n                      \n# 显示图形\nfig",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

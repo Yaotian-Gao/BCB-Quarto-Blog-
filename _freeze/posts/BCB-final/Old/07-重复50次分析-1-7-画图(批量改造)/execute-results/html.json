@@ -1,0 +1,15 @@
+{
+  "hash": "5621f8702aabfe1b44980e6d210c97b9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "library(ggplot2)\nlibrary(readr) \nlibrary(tidyr)\nlibrary(dplyr)\n\n# 定义变量名列表\nvariables <- c(\"GBLUP\", \"RKHS\", \"RF\", \"RR\")\n\n# 设置文件夹路径  \nfolder_path <- \"E:/06-实验/00-6-GP502-GWAS/00-Temp\"\n\n# 遍历变量名\nfor (variable in variables) {\n  \n  # 构建针对当前变量的文件名\n  file_name <- paste0(folder_path, \"/GP502-GS-prediction-clean-\", variable, \".csv\")\n  \n  # 读取数据\n  data <- read.csv(file_name)\n  \n  # 选取Mean数据\n  mean_data <- data[data$Source == \"Mean\",]\n  \n  # 转换数据为长格式\n  mean_long <- pivot_longer(mean_data, cols = -c(Source1, Source), names_to = \"Trait\", values_to = \"Mean\")\n  \n  # 绘制条形图并在条形上方添加Mean值标签\n  p <- ggplot(mean_long, aes(x = Trait, y = Mean, fill = Source1)) + \n    geom_bar(stat = \"identity\", position = position_dodge()) +\n    geom_text(aes(label = round(Mean, 3)), vjust = -0.5, \n              position = position_dodge(width = 0.9), size = 3) +\n    theme_minimal() +\n    labs(x =\"Training Environment\" , y =  \"Prediction Accuracy for YLD\", title = \"\", fill = NULL) +\n    theme(legend.position = \"right\")\n  \n  # 打印图形\n  print(p)\n  \n  # 保存图形到文件,包括变量名  \n  plot_file_name <- paste0(folder_path, \"/GP502-GS-prediction-plot-\", variable, \".jpg\")\n  ggsave(plot_file_name, p, width = 12, height = 8)\n  \n}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
