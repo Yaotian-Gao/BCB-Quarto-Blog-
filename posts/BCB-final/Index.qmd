@@ -34,7 +34,17 @@ The wheat panel was evaluated across five distinct environments, labeled E1 to E
 
 The population was genotyped using Illumina's 90K iSelect SNPchip. Raw data was provided by the USDA/ARS Cereal Crops Research Unit and was analyzed using Genome Studio v2.0.5(Illumina 2010) for processing its raw data. Polymorphic markers were identified as exhibiting clear, distinct clusters in Genome Studio, with a minimum distance of 0.20 between the polar coordinates of normalized theta intensities. Markers were further filtered based on missing data (\>10%) and minor allele frequency (\<5%) using TASSEL v5.2.89 (Bradbury et al. 2007).
 
-**Data Dictionary** \| Field \| Description \| Data Type \| \| --------- \| ------------------------------------------------------------ \| --------- \| \| ENT \| Unique identifier for each wheat variety, numbered from 52001 to 52250 \| Integer \| \| Source \| Source of the plant material, including universities (UI, UCD, WSU), CIMMYT, MSU, USDA, and other sources (commercial varieties and international germplasm) \| String \| \| YLD_E1 \| Yield in kilograms per hectare for environment E1 (2016) \| Float \| \| YLD_E2 \| Yield in kilograms per hectare for environment E2 (2017) \| Float \| \| YLD_E4 \| Yield in kilograms per hectare for environment E4 (2022) \| Float \| \| YLD_E5 \| Yield in kilograms per hectare for environment E5 (2023) \| Float \| \| YLD_BLUPs \| Best Linear Unbiased Prediction (BLUP) values for yield, calculated from the yields of environments E1, E2, E4, and E5. NA indicates not applicable. \| Float \|
+**Data Dictionary**
+
+| Field     | Description                                                                                                                                                  | Data Type |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| ENT       | Unique identifier for each wheat variety, numbered from 52001 to 52250                                                                                       | Integer   |
+| Source    | Source of the plant material, including universities (UI, UCD, WSU), CIMMYT, MSU, USDA, and other sources (commercial varieties and international germplasm) | String    |
+| YLD_E1    | Yield in kilograms per hectare for environment E1 (2016)                                                                                                     | Float     |
+| YLD_E2    | Yield in kilograms per hectare for environment E2 (2017)                                                                                                     | Float     |
+| YLD_E4    | Yield in kilograms per hectare for environment E4 (2022)                                                                                                     | Float     |
+| YLD_E5    | Yield in kilograms per hectare for environment E5 (2023)                                                                                                     | Float     |
+| YLD_BLUPs | Best Linear Unbiased Prediction (BLUP) values for yield, calculated from the yields of environments E1, E2, E4, and E5. NA indicates not applicable.         | Float     |
 
 # 3. Results
 
@@ -86,7 +96,7 @@ print(p2)
 ```
 
 | Trait | Env   | Mean     | Range                    | IQR      | CV    | Skewness | Kurtosis |
-|---------|---------|---------|------------|---------|---------|---------|---------|
+|-------|-------|----------|--------------------------|----------|-------|----------|----------|
 | YLD   | E1    | 5687.207 | 3560.188-7753.867±839.68 | 1115.165 | 0.148 | -0.258   | -0.285   |
 |       | E2    | 5528.63  | 4850.76-6181.51±272.1    | 356.24   | 0.05  | -0.18    | -0.22    |
 |       | E4    | 6012.449 | 5512.441-6517.149±178.2  | 216.375  | 0.03  | -0.017   | 0.31     |
@@ -228,7 +238,7 @@ ggplot(data_long, aes(x = ...2
 ```
 
 | TRAITS | TRAINING ENVIRONMENTS | PREDICTION ENVIRONMENTS | PREDICTION ACCURACIES A |
-|:---------------|:-----------------|:-------------------|:-------------------|
+|:-------|:----------------------|:------------------------|:------------------------|
 | YLD    | BLUPs                 | BLUPs                   | 0.424                   |
 |        |                       | E1                      | 0.369                   |
 |        |                       | E2                      | 0.325                   |
